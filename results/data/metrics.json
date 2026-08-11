@@ -1,0 +1,4066 @@
+{
+  "vanilla": {
+    "name": "my-kaggle-d8",
+    "url": "https://wandb.ai/hbpkillerx/nanochat/runs/kk2bdl2w",
+    "state": "finished",
+    "config": {
+      "depth": 8,
+      "num_iterations": 22000,
+      "device_batch_size": 4,
+      "max_seq_len": 1024,
+      "total_batch_size": 65536,
+      "model_tag": "kaggle-d8",
+      "run": "my-kaggle-d8"
+    },
+    "summary": {
+      "step": 22000,
+      "train_loss": 2.906611397053142,
+      "val_bpb": 0.8918086648394784,
+      "total_training_time": 21426.79233956337,
+      "_runtime": 21763
+    },
+    "history": [
+      {
+        "step": 0,
+        "train_loss": null,
+        "val_bpb": 3.1427053127491815,
+        "total_training_time": 0
+      },
+      {
+        "step": 0,
+        "train_loss": 10.397737503051758,
+        "val_bpb": null,
+        "total_training_time": 0
+      },
+      {
+        "step": 100,
+        "train_loss": 5.77201929043624,
+        "val_bpb": null,
+        "total_training_time": 88.0005350112915
+      },
+      {
+        "step": 200,
+        "train_loss": 4.945570241686658,
+        "val_bpb": null,
+        "total_training_time": 185.90139651298523
+      },
+      {
+        "step": 250,
+        "train_loss": null,
+        "val_bpb": 1.4093412335994002,
+        "total_training_time": 233.6369912624359
+      },
+      {
+        "step": 300,
+        "train_loss": 4.51423833029301,
+        "val_bpb": null,
+        "total_training_time": 283.34104084968567
+      },
+      {
+        "step": 400,
+        "train_loss": 4.179277923293438,
+        "val_bpb": null,
+        "total_training_time": 380.70562863349915
+      },
+      {
+        "step": 500,
+        "train_loss": null,
+        "val_bpb": 1.1997399638116364,
+        "total_training_time": 477.1597321033478
+      },
+      {
+        "step": 500,
+        "train_loss": 3.9320113965566628,
+        "val_bpb": null,
+        "total_training_time": 478.12619161605835
+      },
+      {
+        "step": 600,
+        "train_loss": 3.923650447013552,
+        "val_bpb": null,
+        "total_training_time": 575.1109642982483
+      },
+      {
+        "step": 700,
+        "train_loss": 3.8098254009090637,
+        "val_bpb": null,
+        "total_training_time": 671.9207630157471
+      },
+      {
+        "step": 750,
+        "train_loss": null,
+        "val_bpb": 1.1445646483333705,
+        "total_training_time": 719.3046686649323
+      },
+      {
+        "step": 800,
+        "train_loss": 3.825621140316122,
+        "val_bpb": null,
+        "total_training_time": 768.7623226642609
+      },
+      {
+        "step": 900,
+        "train_loss": 3.7293655766712264,
+        "val_bpb": null,
+        "total_training_time": 865.5294573307037
+      },
+      {
+        "step": 1000,
+        "train_loss": null,
+        "val_bpb": 1.116496805855651,
+        "total_training_time": 961.2141935825348
+      },
+      {
+        "step": 1000,
+        "train_loss": 3.8165612042070225,
+        "val_bpb": null,
+        "total_training_time": 962.1727116107941
+      },
+      {
+        "step": 1100,
+        "train_loss": 3.685866670418668,
+        "val_bpb": null,
+        "total_training_time": 1058.7342879772186
+      },
+      {
+        "step": 1200,
+        "train_loss": 3.653819506930095,
+        "val_bpb": null,
+        "total_training_time": 1155.5953872203827
+      },
+      {
+        "step": 1250,
+        "train_loss": null,
+        "val_bpb": 1.0983040496594403,
+        "total_training_time": 1202.8016984462738
+      },
+      {
+        "step": 1300,
+        "train_loss": 3.67308110524163,
+        "val_bpb": null,
+        "total_training_time": 1252.4400634765625
+      },
+      {
+        "step": 1400,
+        "train_loss": 3.577599986984988,
+        "val_bpb": null,
+        "total_training_time": 1349.115523815155
+      },
+      {
+        "step": 1500,
+        "train_loss": null,
+        "val_bpb": 1.0858939314369471,
+        "total_training_time": 1444.8770439624786
+      },
+      {
+        "step": 1500,
+        "train_loss": 3.6458173477361258,
+        "val_bpb": null,
+        "total_training_time": 1445.831393480301
+      },
+      {
+        "step": 1600,
+        "train_loss": 3.5382747148757434,
+        "val_bpb": null,
+        "total_training_time": 1542.4855160713196
+      },
+      {
+        "step": 1700,
+        "train_loss": 3.672273018110035,
+        "val_bpb": null,
+        "total_training_time": 1639.3098359107971
+      },
+      {
+        "step": 1750,
+        "train_loss": null,
+        "val_bpb": 1.0749358046953823,
+        "total_training_time": 1686.548777103424
+      },
+      {
+        "step": 1800,
+        "train_loss": 3.535975633170261,
+        "val_bpb": null,
+        "total_training_time": 1735.756357908249
+      },
+      {
+        "step": 1900,
+        "train_loss": 3.618110281870421,
+        "val_bpb": null,
+        "total_training_time": 1832.2174944877625
+      },
+      {
+        "step": 2000,
+        "train_loss": null,
+        "val_bpb": 1.0679223438069347,
+        "total_training_time": 1927.84783244133
+      },
+      {
+        "step": 2000,
+        "train_loss": 3.5345776797522044,
+        "val_bpb": null,
+        "total_training_time": 1928.812332868576
+      },
+      {
+        "step": 2100,
+        "train_loss": 3.617123404919134,
+        "val_bpb": null,
+        "total_training_time": 2025.473739862442
+      },
+      {
+        "step": 2200,
+        "train_loss": 3.517791901853736,
+        "val_bpb": null,
+        "total_training_time": 2122.299024105072
+      },
+      {
+        "step": 2250,
+        "train_loss": null,
+        "val_bpb": 1.062780264842073,
+        "total_training_time": 2169.561874628067
+      },
+      {
+        "step": 2300,
+        "train_loss": 3.5874667311090174,
+        "val_bpb": null,
+        "total_training_time": 2219.0625257492065
+      },
+      {
+        "step": 2400,
+        "train_loss": 3.6085501220977663,
+        "val_bpb": null,
+        "total_training_time": 2315.783107995987
+      },
+      {
+        "step": 2500,
+        "train_loss": null,
+        "val_bpb": 1.057719437363521,
+        "total_training_time": 2411.7431194782257
+      },
+      {
+        "step": 2500,
+        "train_loss": 3.616667489767194,
+        "val_bpb": null,
+        "total_training_time": 2412.701155900955
+      },
+      {
+        "step": 2600,
+        "train_loss": 3.5333421443750095,
+        "val_bpb": null,
+        "total_training_time": 2509.3998548984528
+      },
+      {
+        "step": 2700,
+        "train_loss": 3.48312039942698,
+        "val_bpb": null,
+        "total_training_time": 2606.201971769333
+      },
+      {
+        "step": 2750,
+        "train_loss": null,
+        "val_bpb": 1.0532451215019547,
+        "total_training_time": 2653.6278488636017
+      },
+      {
+        "step": 2800,
+        "train_loss": 3.4845836430068,
+        "val_bpb": null,
+        "total_training_time": 2703.1417644023895
+      },
+      {
+        "step": 2900,
+        "train_loss": 3.5596018455854703,
+        "val_bpb": null,
+        "total_training_time": 2799.7597925662994
+      },
+      {
+        "step": 3000,
+        "train_loss": null,
+        "val_bpb": 1.0501258870448387,
+        "total_training_time": 2895.529674768448
+      },
+      {
+        "step": 3000,
+        "train_loss": 3.489981131985742,
+        "val_bpb": null,
+        "total_training_time": 2896.4838333129883
+      },
+      {
+        "step": 3100,
+        "train_loss": 3.4395728362873736,
+        "val_bpb": null,
+        "total_training_time": 2993.5069439411163
+      },
+      {
+        "step": 3200,
+        "train_loss": 3.5308938736856597,
+        "val_bpb": null,
+        "total_training_time": 3090.7154405117035
+      },
+      {
+        "step": 3250,
+        "train_loss": null,
+        "val_bpb": 1.0474853580585746,
+        "total_training_time": 3138.410812139511
+      },
+      {
+        "step": 3300,
+        "train_loss": 3.6043543075993107,
+        "val_bpb": null,
+        "total_training_time": 3188.1133539676666
+      },
+      {
+        "step": 3400,
+        "train_loss": 3.5969574362994146,
+        "val_bpb": null,
+        "total_training_time": 3285.341390609741
+      },
+      {
+        "step": 3500,
+        "train_loss": null,
+        "val_bpb": 1.0437083906549989,
+        "total_training_time": 3381.690633535385
+      },
+      {
+        "step": 3500,
+        "train_loss": 3.4126414542299375,
+        "val_bpb": null,
+        "total_training_time": 3382.655885696411
+      },
+      {
+        "step": 3600,
+        "train_loss": 3.4430967572587794,
+        "val_bpb": null,
+        "total_training_time": 3479.819976568222
+      },
+      {
+        "step": 3700,
+        "train_loss": 3.459013678874456,
+        "val_bpb": null,
+        "total_training_time": 3576.4070324897766
+      },
+      {
+        "step": 3750,
+        "train_loss": null,
+        "val_bpb": 1.042613588212466,
+        "total_training_time": 3623.8030672073364
+      },
+      {
+        "step": 3800,
+        "train_loss": 3.4025138367432293,
+        "val_bpb": null,
+        "total_training_time": 3673.3425834178925
+      },
+      {
+        "step": 3900,
+        "train_loss": 3.5094345679013825,
+        "val_bpb": null,
+        "total_training_time": 3770.5503945350647
+      },
+      {
+        "step": 4000,
+        "train_loss": null,
+        "val_bpb": 1.0388459293717094,
+        "total_training_time": 3866.92085146904
+      },
+      {
+        "step": 4000,
+        "train_loss": 3.4273149435163446,
+        "val_bpb": null,
+        "total_training_time": 3867.887838125229
+      },
+      {
+        "step": 4100,
+        "train_loss": 3.4998586502046893,
+        "val_bpb": null,
+        "total_training_time": 3965.432637453079
+      },
+      {
+        "step": 4200,
+        "train_loss": 3.3958998307577075,
+        "val_bpb": null,
+        "total_training_time": 4063.099261522293
+      },
+      {
+        "step": 4250,
+        "train_loss": null,
+        "val_bpb": 1.0359034132893472,
+        "total_training_time": 4110.985999822617
+      },
+      {
+        "step": 4300,
+        "train_loss": 3.4446107215147705,
+        "val_bpb": null,
+        "total_training_time": 4160.657060623169
+      },
+      {
+        "step": 4400,
+        "train_loss": 3.4725164980922885,
+        "val_bpb": null,
+        "total_training_time": 4257.381657123566
+      },
+      {
+        "step": 4500,
+        "train_loss": null,
+        "val_bpb": 1.033827459461953,
+        "total_training_time": 4352.890366315842
+      },
+      {
+        "step": 4500,
+        "train_loss": 3.524926378253692,
+        "val_bpb": null,
+        "total_training_time": 4353.841637372971
+      },
+      {
+        "step": 4600,
+        "train_loss": 3.4704456021885686,
+        "val_bpb": null,
+        "total_training_time": 4450.592106580734
+      },
+      {
+        "step": 4700,
+        "train_loss": 3.491877119245512,
+        "val_bpb": null,
+        "total_training_time": 4547.802586317062
+      },
+      {
+        "step": 4750,
+        "train_loss": null,
+        "val_bpb": 1.0329313840116912,
+        "total_training_time": 4595.504549264908
+      },
+      {
+        "step": 4800,
+        "train_loss": 3.50169488484741,
+        "val_bpb": null,
+        "total_training_time": 4645.110865831375
+      },
+      {
+        "step": 4900,
+        "train_loss": 3.5234955386142195,
+        "val_bpb": null,
+        "total_training_time": 4742.450188398361
+      },
+      {
+        "step": 5000,
+        "train_loss": null,
+        "val_bpb": 1.032236272495153,
+        "total_training_time": 4838.890154361725
+      },
+      {
+        "step": 5000,
+        "train_loss": 3.4186300668736274,
+        "val_bpb": null,
+        "total_training_time": 4839.850129127502
+      },
+      {
+        "step": 5100,
+        "train_loss": 3.479476796427675,
+        "val_bpb": null,
+        "total_training_time": 4937.131747484207
+      },
+      {
+        "step": 5200,
+        "train_loss": 3.367991079323005,
+        "val_bpb": null,
+        "total_training_time": 5034.256124019623
+      },
+      {
+        "step": 5250,
+        "train_loss": null,
+        "val_bpb": 1.0290392502030088,
+        "total_training_time": 5081.94172334671
+      },
+      {
+        "step": 5300,
+        "train_loss": 3.547154757348885,
+        "val_bpb": null,
+        "total_training_time": 5131.620783805847
+      },
+      {
+        "step": 5400,
+        "train_loss": 3.291393617843644,
+        "val_bpb": null,
+        "total_training_time": 5228.962468147278
+      },
+      {
+        "step": 5500,
+        "train_loss": null,
+        "val_bpb": 1.0289421236483258,
+        "total_training_time": 5325.459370613098
+      },
+      {
+        "step": 5500,
+        "train_loss": 3.437081672740771,
+        "val_bpb": null,
+        "total_training_time": 5326.423998832703
+      },
+      {
+        "step": 5600,
+        "train_loss": 3.3879725237129894,
+        "val_bpb": null,
+        "total_training_time": 5423.975119113922
+      },
+      {
+        "step": 5700,
+        "train_loss": 3.4845636810159406,
+        "val_bpb": null,
+        "total_training_time": 5521.404467344284
+      },
+      {
+        "step": 5750,
+        "train_loss": null,
+        "val_bpb": 1.0268262656717937,
+        "total_training_time": 5569.0218098163605
+      },
+      {
+        "step": 5800,
+        "train_loss": 3.445280460514199,
+        "val_bpb": null,
+        "total_training_time": 5618.673743724823
+      },
+      {
+        "step": 5900,
+        "train_loss": 3.515019912006503,
+        "val_bpb": null,
+        "total_training_time": 5715.763767957687
+      },
+      {
+        "step": 6000,
+        "train_loss": null,
+        "val_bpb": 1.0260265951821979,
+        "total_training_time": 5812.062847852707
+      },
+      {
+        "step": 6000,
+        "train_loss": 3.506375079795924,
+        "val_bpb": null,
+        "total_training_time": 5813.025218486786
+      },
+      {
+        "step": 6100,
+        "train_loss": 3.441393511787247,
+        "val_bpb": null,
+        "total_training_time": 5910.638139486313
+      },
+      {
+        "step": 6200,
+        "train_loss": 3.4018959412763516,
+        "val_bpb": null,
+        "total_training_time": 6008.36257815361
+      },
+      {
+        "step": 6250,
+        "train_loss": null,
+        "val_bpb": 1.02410917556033,
+        "total_training_time": 6056.324385881424
+      },
+      {
+        "step": 6300,
+        "train_loss": 3.450816148904481,
+        "val_bpb": null,
+        "total_training_time": 6106.113101482391
+      },
+      {
+        "step": 6400,
+        "train_loss": 3.4072265963657573,
+        "val_bpb": null,
+        "total_training_time": 6203.557374000549
+      },
+      {
+        "step": 6500,
+        "train_loss": null,
+        "val_bpb": 1.0233078454044953,
+        "total_training_time": 6299.472156047821
+      },
+      {
+        "step": 6500,
+        "train_loss": 3.3577056681523376,
+        "val_bpb": null,
+        "total_training_time": 6300.431200027466
+      },
+      {
+        "step": 6600,
+        "train_loss": 3.363865914977638,
+        "val_bpb": null,
+        "total_training_time": 6397.191660642624
+      },
+      {
+        "step": 6700,
+        "train_loss": 3.4262585204143226,
+        "val_bpb": null,
+        "total_training_time": 6494.025425434113
+      },
+      {
+        "step": 6750,
+        "train_loss": null,
+        "val_bpb": 1.0219710924880756,
+        "total_training_time": 6541.599755048752
+      },
+      {
+        "step": 6800,
+        "train_loss": 3.445657367292578,
+        "val_bpb": null,
+        "total_training_time": 6591.199630022049
+      },
+      {
+        "step": 6900,
+        "train_loss": 3.388268412490095,
+        "val_bpb": null,
+        "total_training_time": 6688.218215465546
+      },
+      {
+        "step": 7000,
+        "train_loss": null,
+        "val_bpb": 1.020399749356742,
+        "total_training_time": 6785.024273633957
+      },
+      {
+        "step": 7000,
+        "train_loss": 3.5047301116856535,
+        "val_bpb": null,
+        "total_training_time": 6785.984743118286
+      },
+      {
+        "step": 7100,
+        "train_loss": 3.4666200507456875,
+        "val_bpb": null,
+        "total_training_time": 6883.762606143951
+      },
+      {
+        "step": 7200,
+        "train_loss": 3.3821585565472847,
+        "val_bpb": null,
+        "total_training_time": 6981.730019330978
+      },
+      {
+        "step": 7250,
+        "train_loss": null,
+        "val_bpb": 1.0182981789417458,
+        "total_training_time": 7029.68506026268
+      },
+      {
+        "step": 7300,
+        "train_loss": 3.357326545875137,
+        "val_bpb": null,
+        "total_training_time": 7079.691910028458
+      },
+      {
+        "step": 7400,
+        "train_loss": 3.4923265985801426,
+        "val_bpb": null,
+        "total_training_time": 7177.348804235458
+      },
+      {
+        "step": 7500,
+        "train_loss": null,
+        "val_bpb": 1.0178733043845591,
+        "total_training_time": 7274.160803079605
+      },
+      {
+        "step": 7500,
+        "train_loss": 3.406890143979385,
+        "val_bpb": null,
+        "total_training_time": 7275.1233558654785
+      },
+      {
+        "step": 7600,
+        "train_loss": 3.405343317132532,
+        "val_bpb": null,
+        "total_training_time": 7372.499967813492
+      },
+      {
+        "step": 7700,
+        "train_loss": 3.4463501823131253,
+        "val_bpb": null,
+        "total_training_time": 7469.944860696793
+      },
+      {
+        "step": 7750,
+        "train_loss": null,
+        "val_bpb": 1.0162931578062186,
+        "total_training_time": 7517.679080963135
+      },
+      {
+        "step": 7800,
+        "train_loss": 3.4627109461614816,
+        "val_bpb": null,
+        "total_training_time": 7567.418340682983
+      },
+      {
+        "step": 7900,
+        "train_loss": 3.4306270296429893,
+        "val_bpb": null,
+        "total_training_time": 7664.774196147919
+      },
+      {
+        "step": 8000,
+        "train_loss": null,
+        "val_bpb": 1.0124382582488114,
+        "total_training_time": 7761.195002794266
+      },
+      {
+        "step": 8000,
+        "train_loss": 3.4511918008578895,
+        "val_bpb": null,
+        "total_training_time": 7762.161517620087
+      },
+      {
+        "step": 8100,
+        "train_loss": 3.334404185200634,
+        "val_bpb": null,
+        "total_training_time": 7859.6784200668335
+      },
+      {
+        "step": 8200,
+        "train_loss": 3.3623976261228217,
+        "val_bpb": null,
+        "total_training_time": 7956.642858505249
+      },
+      {
+        "step": 8250,
+        "train_loss": null,
+        "val_bpb": 1.010149362027012,
+        "total_training_time": 8004.191928386688
+      },
+      {
+        "step": 8300,
+        "train_loss": 3.4267793201412893,
+        "val_bpb": null,
+        "total_training_time": 8053.738865375519
+      },
+      {
+        "step": 8400,
+        "train_loss": 3.3467866995087325,
+        "val_bpb": null,
+        "total_training_time": 8150.784818410873
+      },
+      {
+        "step": 8500,
+        "train_loss": null,
+        "val_bpb": 1.0071895998476446,
+        "total_training_time": 8246.982479095459
+      },
+      {
+        "step": 8500,
+        "train_loss": 3.3850744644392736,
+        "val_bpb": null,
+        "total_training_time": 8247.943496704102
+      },
+      {
+        "step": 8600,
+        "train_loss": 3.4292886927304784,
+        "val_bpb": null,
+        "total_training_time": 8345.154988527298
+      },
+      {
+        "step": 8700,
+        "train_loss": 3.380527240272671,
+        "val_bpb": null,
+        "total_training_time": 8442.565331459045
+      },
+      {
+        "step": 8750,
+        "train_loss": null,
+        "val_bpb": 1.0044149265336273,
+        "total_training_time": 8490.08845090866
+      },
+      {
+        "step": 8800,
+        "train_loss": 3.372443411893706,
+        "val_bpb": null,
+        "total_training_time": 8539.795725107193
+      },
+      {
+        "step": 8900,
+        "train_loss": 3.3246370573114623,
+        "val_bpb": null,
+        "total_training_time": 8637.341475486755
+      },
+      {
+        "step": 9000,
+        "train_loss": null,
+        "val_bpb": 1.0034564332008986,
+        "total_training_time": 8734.039794921875
+      },
+      {
+        "step": 9000,
+        "train_loss": 3.312054720809862,
+        "val_bpb": null,
+        "total_training_time": 8735.004217386246
+      },
+      {
+        "step": 9100,
+        "train_loss": 3.318597281155565,
+        "val_bpb": null,
+        "total_training_time": 8832.511533737183
+      },
+      {
+        "step": 9200,
+        "train_loss": 3.236302197486328,
+        "val_bpb": null,
+        "total_training_time": 8930.06377005577
+      },
+      {
+        "step": 9250,
+        "train_loss": null,
+        "val_bpb": 1.0004735078535865,
+        "total_training_time": 8977.990369558334
+      },
+      {
+        "step": 9300,
+        "train_loss": 3.3964150544289353,
+        "val_bpb": null,
+        "total_training_time": 9027.87268781662
+      },
+      {
+        "step": 9400,
+        "train_loss": 3.2360596379017577,
+        "val_bpb": null,
+        "total_training_time": 9125.5793030262
+      },
+      {
+        "step": 9500,
+        "train_loss": null,
+        "val_bpb": 0.9976991953365778,
+        "total_training_time": 9222.007958889008
+      },
+      {
+        "step": 9500,
+        "train_loss": 3.371937744606662,
+        "val_bpb": null,
+        "total_training_time": 9222.968107938766
+      },
+      {
+        "step": 9600,
+        "train_loss": 3.433447654198793,
+        "val_bpb": null,
+        "total_training_time": 9320.273940086365
+      },
+      {
+        "step": 9700,
+        "train_loss": 3.312190169651596,
+        "val_bpb": null,
+        "total_training_time": 9417.630430459976
+      },
+      {
+        "step": 9750,
+        "train_loss": null,
+        "val_bpb": 0.9952923184930055,
+        "total_training_time": 9465.359236001968
+      },
+      {
+        "step": 9800,
+        "train_loss": 3.3650751865785034,
+        "val_bpb": null,
+        "total_training_time": 9515.091003894806
+      },
+      {
+        "step": 9900,
+        "train_loss": 3.328911047078712,
+        "val_bpb": null,
+        "total_training_time": 9612.615569114685
+      },
+      {
+        "step": 10000,
+        "train_loss": null,
+        "val_bpb": 0.9925314997841139,
+        "total_training_time": 9709.205080986023
+      },
+      {
+        "step": 10000,
+        "train_loss": 3.4096123037932276,
+        "val_bpb": null,
+        "total_training_time": 9710.177601099014
+      },
+      {
+        "step": 10100,
+        "train_loss": 3.4235220287696766,
+        "val_bpb": null,
+        "total_training_time": 9807.877798557281
+      },
+      {
+        "step": 10200,
+        "train_loss": 3.3789977110265963,
+        "val_bpb": null,
+        "total_training_time": 9905.56337594986
+      },
+      {
+        "step": 10250,
+        "train_loss": null,
+        "val_bpb": 0.9900917904127698,
+        "total_training_time": 9953.417752027512
+      },
+      {
+        "step": 10300,
+        "train_loss": 3.2915202183017724,
+        "val_bpb": null,
+        "total_training_time": 10003.345893621445
+      },
+      {
+        "step": 10400,
+        "train_loss": 3.438221926011755,
+        "val_bpb": null,
+        "total_training_time": 10101.01689863205
+      },
+      {
+        "step": 10500,
+        "train_loss": null,
+        "val_bpb": 0.9879793960875192,
+        "total_training_time": 10197.658569335938
+      },
+      {
+        "step": 10500,
+        "train_loss": 3.299080014953258,
+        "val_bpb": null,
+        "total_training_time": 10198.619386434555
+      },
+      {
+        "step": 10600,
+        "train_loss": 3.4027000796124587,
+        "val_bpb": null,
+        "total_training_time": 10296.309399366379
+      },
+      {
+        "step": 10700,
+        "train_loss": 3.358760238904543,
+        "val_bpb": null,
+        "total_training_time": 10394.226141929626
+      },
+      {
+        "step": 10750,
+        "train_loss": null,
+        "val_bpb": 0.9861741121758869,
+        "total_training_time": 10442.174733161926
+      },
+      {
+        "step": 10800,
+        "train_loss": 3.3777566610681222,
+        "val_bpb": null,
+        "total_training_time": 10492.034596204758
+      },
+      {
+        "step": 10900,
+        "train_loss": 3.2451857634418997,
+        "val_bpb": null,
+        "total_training_time": 10589.740936279297
+      },
+      {
+        "step": 11000,
+        "train_loss": null,
+        "val_bpb": 0.9835853214806388,
+        "total_training_time": 10686.544111013412
+      },
+      {
+        "step": 11000,
+        "train_loss": 3.280063305473045,
+        "val_bpb": null,
+        "total_training_time": 10687.502388954163
+      },
+      {
+        "step": 11100,
+        "train_loss": 3.294520741966721,
+        "val_bpb": null,
+        "total_training_time": 10785.311547756195
+      },
+      {
+        "step": 11200,
+        "train_loss": 3.2866433033357554,
+        "val_bpb": null,
+        "total_training_time": 10883.01177406311
+      },
+      {
+        "step": 11250,
+        "train_loss": null,
+        "val_bpb": 0.9813896552058309,
+        "total_training_time": 10930.852196455002
+      },
+      {
+        "step": 11300,
+        "train_loss": 3.2905054130970135,
+        "val_bpb": null,
+        "total_training_time": 10980.716193675995
+      },
+      {
+        "step": 11400,
+        "train_loss": 3.370243464097495,
+        "val_bpb": null,
+        "total_training_time": 11078.253851890564
+      },
+      {
+        "step": 11500,
+        "train_loss": null,
+        "val_bpb": 0.9797584197710896,
+        "total_training_time": 11175.022706747055
+      },
+      {
+        "step": 11500,
+        "train_loss": 3.247544053255023,
+        "val_bpb": null,
+        "total_training_time": 11175.990897893906
+      },
+      {
+        "step": 11600,
+        "train_loss": 3.295730131590947,
+        "val_bpb": null,
+        "total_training_time": 11273.709364175797
+      },
+      {
+        "step": 11700,
+        "train_loss": 3.1824042530589995,
+        "val_bpb": null,
+        "total_training_time": 11371.516561746597
+      },
+      {
+        "step": 11750,
+        "train_loss": null,
+        "val_bpb": 0.9774320006604084,
+        "total_training_time": 11419.377665281296
+      },
+      {
+        "step": 11800,
+        "train_loss": 3.2127629488288028,
+        "val_bpb": null,
+        "total_training_time": 11469.27971315384
+      },
+      {
+        "step": 11900,
+        "train_loss": 3.3113932933169745,
+        "val_bpb": null,
+        "total_training_time": 11566.973620653152
+      },
+      {
+        "step": 12000,
+        "train_loss": null,
+        "val_bpb": 0.9754521631560734,
+        "total_training_time": 11663.788725614548
+      },
+      {
+        "step": 12000,
+        "train_loss": 3.3651251998546923,
+        "val_bpb": null,
+        "total_training_time": 11664.752943515778
+      },
+      {
+        "step": 12100,
+        "train_loss": 3.286336833474312,
+        "val_bpb": null,
+        "total_training_time": 11762.350795984268
+      },
+      {
+        "step": 12200,
+        "train_loss": 3.2265274877375876,
+        "val_bpb": null,
+        "total_training_time": 11860.214292764664
+      },
+      {
+        "step": 12250,
+        "train_loss": null,
+        "val_bpb": 0.9726209168711265,
+        "total_training_time": 11908.114547252655
+      },
+      {
+        "step": 12300,
+        "train_loss": 3.2604504185560006,
+        "val_bpb": null,
+        "total_training_time": 11957.990305900574
+      },
+      {
+        "step": 12400,
+        "train_loss": 3.2928467372248247,
+        "val_bpb": null,
+        "total_training_time": 12055.80494260788
+      },
+      {
+        "step": 12500,
+        "train_loss": null,
+        "val_bpb": 0.9716175403905426,
+        "total_training_time": 12152.540842533112
+      },
+      {
+        "step": 12500,
+        "train_loss": 3.246961285644801,
+        "val_bpb": null,
+        "total_training_time": 12153.509811878204
+      },
+      {
+        "step": 12600,
+        "train_loss": 3.3087362811962686,
+        "val_bpb": null,
+        "total_training_time": 12251.232308149338
+      },
+      {
+        "step": 12700,
+        "train_loss": 3.2542572596857413,
+        "val_bpb": null,
+        "total_training_time": 12348.878474235535
+      },
+      {
+        "step": 12750,
+        "train_loss": null,
+        "val_bpb": 0.9695804083212609,
+        "total_training_time": 12396.745782613754
+      },
+      {
+        "step": 12800,
+        "train_loss": 3.2740750118873914,
+        "val_bpb": null,
+        "total_training_time": 12446.518893957138
+      },
+      {
+        "step": 12900,
+        "train_loss": 3.2677972677149247,
+        "val_bpb": null,
+        "total_training_time": 12544.203812599182
+      },
+      {
+        "step": 13000,
+        "train_loss": null,
+        "val_bpb": 0.9665497134500262,
+        "total_training_time": 12640.449711561203
+      },
+      {
+        "step": 13000,
+        "train_loss": 3.2866411887953384,
+        "val_bpb": null,
+        "total_training_time": 12641.406740665436
+      },
+      {
+        "step": 13100,
+        "train_loss": 3.173973225878618,
+        "val_bpb": null,
+        "total_training_time": 12738.601585626602
+      },
+      {
+        "step": 13200,
+        "train_loss": 3.2314193184126303,
+        "val_bpb": null,
+        "total_training_time": 12835.752945899963
+      },
+      {
+        "step": 13250,
+        "train_loss": null,
+        "val_bpb": 0.9640089087569059,
+        "total_training_time": 12883.22397685051
+      },
+      {
+        "step": 13300,
+        "train_loss": 3.218346525714229,
+        "val_bpb": null,
+        "total_training_time": 12932.715479373932
+      },
+      {
+        "step": 13400,
+        "train_loss": 3.192215963486031,
+        "val_bpb": null,
+        "total_training_time": 13029.759492397308
+      },
+      {
+        "step": 13500,
+        "train_loss": null,
+        "val_bpb": 0.9620229377034267,
+        "total_training_time": 13126.055527925491
+      },
+      {
+        "step": 13500,
+        "train_loss": 3.2179120683905267,
+        "val_bpb": null,
+        "total_training_time": 13127.01504945755
+      },
+      {
+        "step": 13600,
+        "train_loss": 3.1385621415141927,
+        "val_bpb": null,
+        "total_training_time": 13224.202692985535
+      },
+      {
+        "step": 13700,
+        "train_loss": 3.2443201295606565,
+        "val_bpb": null,
+        "total_training_time": 13321.630482912064
+      },
+      {
+        "step": 13750,
+        "train_loss": null,
+        "val_bpb": 0.9602681653729818,
+        "total_training_time": 13369.35643029213
+      },
+      {
+        "step": 13800,
+        "train_loss": 3.1900601918701446,
+        "val_bpb": null,
+        "total_training_time": 13418.925430774689
+      },
+      {
+        "step": 13900,
+        "train_loss": 3.2625438167589067,
+        "val_bpb": null,
+        "total_training_time": 13516.368336200714
+      },
+      {
+        "step": 14000,
+        "train_loss": null,
+        "val_bpb": 0.9573815006675322,
+        "total_training_time": 13612.893900871277
+      },
+      {
+        "step": 14000,
+        "train_loss": 3.2145938551198476,
+        "val_bpb": null,
+        "total_training_time": 13613.869424819946
+      },
+      {
+        "step": 14100,
+        "train_loss": 3.142500396112257,
+        "val_bpb": null,
+        "total_training_time": 13711.541744232178
+      },
+      {
+        "step": 14200,
+        "train_loss": 3.265318369485869,
+        "val_bpb": null,
+        "total_training_time": 13809.056167602539
+      },
+      {
+        "step": 14250,
+        "train_loss": null,
+        "val_bpb": 0.9547862156261315,
+        "total_training_time": 13856.948159694672
+      },
+      {
+        "step": 14300,
+        "train_loss": 3.2231855697236984,
+        "val_bpb": null,
+        "total_training_time": 13906.798860549927
+      },
+      {
+        "step": 14400,
+        "train_loss": 3.3090791808855986,
+        "val_bpb": null,
+        "total_training_time": 14004.549454927444
+      },
+      {
+        "step": 14500,
+        "train_loss": null,
+        "val_bpb": 0.9532236759418048,
+        "total_training_time": 14101.277967453003
+      },
+      {
+        "step": 14500,
+        "train_loss": 3.2184828564946115,
+        "val_bpb": null,
+        "total_training_time": 14102.238146066666
+      },
+      {
+        "step": 14600,
+        "train_loss": 3.2159321450099223,
+        "val_bpb": null,
+        "total_training_time": 14199.669333219528
+      },
+      {
+        "step": 14700,
+        "train_loss": 3.2211791753449326,
+        "val_bpb": null,
+        "total_training_time": 14297.144530296326
+      },
+      {
+        "step": 14750,
+        "train_loss": null,
+        "val_bpb": 0.9507470209567924,
+        "total_training_time": 14344.788459300995
+      },
+      {
+        "step": 14800,
+        "train_loss": 3.24188967845169,
+        "val_bpb": null,
+        "total_training_time": 14394.404875993729
+      },
+      {
+        "step": 14900,
+        "train_loss": 3.1807717539106752,
+        "val_bpb": null,
+        "total_training_time": 14491.956530094147
+      },
+      {
+        "step": 15000,
+        "train_loss": null,
+        "val_bpb": 0.948406169965772,
+        "total_training_time": 14588.52780842781
+      },
+      {
+        "step": 15000,
+        "train_loss": 3.2097702725899286,
+        "val_bpb": null,
+        "total_training_time": 14589.495306491852
+      },
+      {
+        "step": 15100,
+        "train_loss": 3.259988496755794,
+        "val_bpb": null,
+        "total_training_time": 14687.036210775375
+      },
+      {
+        "step": 15200,
+        "train_loss": 3.220271242331097,
+        "val_bpb": null,
+        "total_training_time": 14784.584478139877
+      },
+      {
+        "step": 15250,
+        "train_loss": null,
+        "val_bpb": 0.946224286136688,
+        "total_training_time": 14832.384568691254
+      },
+      {
+        "step": 15300,
+        "train_loss": 3.0993396839513885,
+        "val_bpb": null,
+        "total_training_time": 14882.235480546951
+      },
+      {
+        "step": 15400,
+        "train_loss": 3.2644383462422963,
+        "val_bpb": null,
+        "total_training_time": 14979.807305335999
+      },
+      {
+        "step": 15500,
+        "train_loss": null,
+        "val_bpb": 0.9445691659399853,
+        "total_training_time": 15076.451644420624
+      },
+      {
+        "step": 15500,
+        "train_loss": 3.1699227535287786,
+        "val_bpb": null,
+        "total_training_time": 15077.412576913834
+      },
+      {
+        "step": 15600,
+        "train_loss": 3.112593932422318,
+        "val_bpb": null,
+        "total_training_time": 15175.064071893692
+      },
+      {
+        "step": 15700,
+        "train_loss": 3.257180611864,
+        "val_bpb": null,
+        "total_training_time": 15272.531735658646
+      },
+      {
+        "step": 15750,
+        "train_loss": null,
+        "val_bpb": 0.9424901092583182,
+        "total_training_time": 15320.116693735123
+      },
+      {
+        "step": 15800,
+        "train_loss": 3.1404255851735345,
+        "val_bpb": null,
+        "total_training_time": 15369.941466093063
+      },
+      {
+        "step": 15900,
+        "train_loss": 3.169350122739992,
+        "val_bpb": null,
+        "total_training_time": 15467.39854669571
+      },
+      {
+        "step": 16000,
+        "train_loss": null,
+        "val_bpb": 0.9402414779826653,
+        "total_training_time": 15564.060057401657
+      },
+      {
+        "step": 16000,
+        "train_loss": 3.1625889169174983,
+        "val_bpb": null,
+        "total_training_time": 15565.028704404831
+      },
+      {
+        "step": 16100,
+        "train_loss": 3.116537545591333,
+        "val_bpb": null,
+        "total_training_time": 15662.625832796097
+      },
+      {
+        "step": 16200,
+        "train_loss": 3.2301750615616927,
+        "val_bpb": null,
+        "total_training_time": 15760.198437452316
+      },
+      {
+        "step": 16250,
+        "train_loss": null,
+        "val_bpb": 0.937711857996808,
+        "total_training_time": 15807.855208396912
+      },
+      {
+        "step": 16300,
+        "train_loss": 3.1024522462703166,
+        "val_bpb": null,
+        "total_training_time": 15857.680552959442
+      },
+      {
+        "step": 16400,
+        "train_loss": 3.203910549403172,
+        "val_bpb": null,
+        "total_training_time": 15955.18455004692
+      },
+      {
+        "step": 16500,
+        "train_loss": null,
+        "val_bpb": 0.9354213021087697,
+        "total_training_time": 16051.757390022278
+      },
+      {
+        "step": 16500,
+        "train_loss": 3.1290867194616485,
+        "val_bpb": null,
+        "total_training_time": 16052.72360920906
+      },
+      {
+        "step": 16600,
+        "train_loss": 3.1737018311465217,
+        "val_bpb": null,
+        "total_training_time": 16150.476316928864
+      },
+      {
+        "step": 16700,
+        "train_loss": 3.158078547808762,
+        "val_bpb": null,
+        "total_training_time": 16248.054717302322
+      },
+      {
+        "step": 16750,
+        "train_loss": null,
+        "val_bpb": 0.9327377661190946,
+        "total_training_time": 16295.89638376236
+      },
+      {
+        "step": 16800,
+        "train_loss": 3.2283456516827074,
+        "val_bpb": null,
+        "total_training_time": 16345.842191457748
+      },
+      {
+        "step": 16900,
+        "train_loss": 3.184501563390803,
+        "val_bpb": null,
+        "total_training_time": 16443.661617279053
+      },
+      {
+        "step": 17000,
+        "train_loss": null,
+        "val_bpb": 0.9307868645348397,
+        "total_training_time": 16540.509861946106
+      },
+      {
+        "step": 17000,
+        "train_loss": 3.133745163342943,
+        "val_bpb": null,
+        "total_training_time": 16541.47537970543
+      },
+      {
+        "step": 17100,
+        "train_loss": 3.1138050117627376,
+        "val_bpb": null,
+        "total_training_time": 16639.050688505173
+      },
+      {
+        "step": 17200,
+        "train_loss": 2.992974565450237,
+        "val_bpb": null,
+        "total_training_time": 16736.790152072906
+      },
+      {
+        "step": 17250,
+        "train_loss": null,
+        "val_bpb": 0.9289860545061127,
+        "total_training_time": 16784.659195423126
+      },
+      {
+        "step": 17300,
+        "train_loss": 3.166415823937885,
+        "val_bpb": null,
+        "total_training_time": 16834.545054912567
+      },
+      {
+        "step": 17400,
+        "train_loss": 3.1422622017513953,
+        "val_bpb": null,
+        "total_training_time": 16932.103885650635
+      },
+      {
+        "step": 17500,
+        "train_loss": null,
+        "val_bpb": 0.9263122600356666,
+        "total_training_time": 17028.922695875168
+      },
+      {
+        "step": 17500,
+        "train_loss": 3.114970059193056,
+        "val_bpb": null,
+        "total_training_time": 17029.889662504196
+      },
+      {
+        "step": 17600,
+        "train_loss": 3.0905616686921173,
+        "val_bpb": null,
+        "total_training_time": 17127.670627355576
+      },
+      {
+        "step": 17700,
+        "train_loss": 3.012345926580398,
+        "val_bpb": null,
+        "total_training_time": 17225.427629470825
+      },
+      {
+        "step": 17750,
+        "train_loss": null,
+        "val_bpb": 0.9239312884173032,
+        "total_training_time": 17273.281546115875
+      },
+      {
+        "step": 17800,
+        "train_loss": 3.0880744864789604,
+        "val_bpb": null,
+        "total_training_time": 17323.185176610947
+      },
+      {
+        "step": 17900,
+        "train_loss": 3.1071884088749684,
+        "val_bpb": null,
+        "total_training_time": 17420.8744931221
+      },
+      {
+        "step": 18000,
+        "train_loss": null,
+        "val_bpb": 0.9224178171261299,
+        "total_training_time": 17517.831536769867
+      },
+      {
+        "step": 18000,
+        "train_loss": 3.061690957335908,
+        "val_bpb": null,
+        "total_training_time": 17518.790098667145
+      },
+      {
+        "step": 18100,
+        "train_loss": 3.078651819562883,
+        "val_bpb": null,
+        "total_training_time": 17616.431113004684
+      },
+      {
+        "step": 18200,
+        "train_loss": 3.0090101000404186,
+        "val_bpb": null,
+        "total_training_time": 17714.03261566162
+      },
+      {
+        "step": 18250,
+        "train_loss": null,
+        "val_bpb": 0.9199876327958098,
+        "total_training_time": 17761.859368801117
+      },
+      {
+        "step": 18300,
+        "train_loss": 3.059591194099325,
+        "val_bpb": null,
+        "total_training_time": 17811.749195098877
+      },
+      {
+        "step": 18400,
+        "train_loss": 3.1640726472175587,
+        "val_bpb": null,
+        "total_training_time": 17909.59783053398
+      },
+      {
+        "step": 18500,
+        "train_loss": null,
+        "val_bpb": 0.917598867962063,
+        "total_training_time": 18006.287882089615
+      },
+      {
+        "step": 18500,
+        "train_loss": 3.1320238157341374,
+        "val_bpb": null,
+        "total_training_time": 18007.247746944427
+      },
+      {
+        "step": 18600,
+        "train_loss": 3.03012330193991,
+        "val_bpb": null,
+        "total_training_time": 18104.92994427681
+      },
+      {
+        "step": 18700,
+        "train_loss": 3.1676174903220216,
+        "val_bpb": null,
+        "total_training_time": 18202.579964637756
+      },
+      {
+        "step": 18750,
+        "train_loss": null,
+        "val_bpb": 0.915475649726558,
+        "total_training_time": 18250.43606710434
+      },
+      {
+        "step": 18800,
+        "train_loss": 3.078950647886497,
+        "val_bpb": null,
+        "total_training_time": 18300.285875558853
+      },
+      {
+        "step": 18900,
+        "train_loss": 3.0783579033892416,
+        "val_bpb": null,
+        "total_training_time": 18397.876083374023
+      },
+      {
+        "step": 19000,
+        "train_loss": null,
+        "val_bpb": 0.9134593717243664,
+        "total_training_time": 18494.658329486847
+      },
+      {
+        "step": 19000,
+        "train_loss": 3.106509251497291,
+        "val_bpb": null,
+        "total_training_time": 18495.624968528748
+      },
+      {
+        "step": 19100,
+        "train_loss": 3.094255250106811,
+        "val_bpb": null,
+        "total_training_time": 18593.50909280777
+      },
+      {
+        "step": 19200,
+        "train_loss": 3.0606276573465556,
+        "val_bpb": null,
+        "total_training_time": 18691.250591039658
+      },
+      {
+        "step": 19250,
+        "train_loss": null,
+        "val_bpb": 0.9112354189640937,
+        "total_training_time": 18739.058117628098
+      },
+      {
+        "step": 19300,
+        "train_loss": 3.0968406282093377,
+        "val_bpb": null,
+        "total_training_time": 18788.9984228611
+      },
+      {
+        "step": 19400,
+        "train_loss": 3.058193337293916,
+        "val_bpb": null,
+        "total_training_time": 18886.631285905838
+      },
+      {
+        "step": 19500,
+        "train_loss": null,
+        "val_bpb": 0.9093932615981948,
+        "total_training_time": 18983.369613409042
+      },
+      {
+        "step": 19500,
+        "train_loss": 3.097557765655252,
+        "val_bpb": null,
+        "total_training_time": 18984.33532643318
+      },
+      {
+        "step": 19600,
+        "train_loss": 3.05046067005685,
+        "val_bpb": null,
+        "total_training_time": 19082.376256465912
+      },
+      {
+        "step": 19700,
+        "train_loss": 3.182204809250357,
+        "val_bpb": null,
+        "total_training_time": 19180.12828564644
+      },
+      {
+        "step": 19750,
+        "train_loss": null,
+        "val_bpb": 0.907918828543339,
+        "total_training_time": 19227.975777864456
+      },
+      {
+        "step": 19800,
+        "train_loss": 2.9063169288259134,
+        "val_bpb": null,
+        "total_training_time": 19277.851214408875
+      },
+      {
+        "step": 19900,
+        "train_loss": 3.098996513542938,
+        "val_bpb": null,
+        "total_training_time": 19375.502279758453
+      },
+      {
+        "step": 20000,
+        "train_loss": null,
+        "val_bpb": 0.9053425214245843,
+        "total_training_time": 19472.325939893723
+      },
+      {
+        "step": 20000,
+        "train_loss": 3.1068242044522685,
+        "val_bpb": null,
+        "total_training_time": 19473.286028862
+      },
+      {
+        "step": 20100,
+        "train_loss": 3.085187939865974,
+        "val_bpb": null,
+        "total_training_time": 19570.857140302658
+      },
+      {
+        "step": 20200,
+        "train_loss": 2.9413498307545978,
+        "val_bpb": null,
+        "total_training_time": 19668.486959457397
+      },
+      {
+        "step": 20250,
+        "train_loss": null,
+        "val_bpb": 0.9039842650064592,
+        "total_training_time": 19716.3728787899
+      },
+      {
+        "step": 20300,
+        "train_loss": 3.1178181502217392,
+        "val_bpb": null,
+        "total_training_time": 19766.26145839691
+      },
+      {
+        "step": 20400,
+        "train_loss": 3.073469547438422,
+        "val_bpb": null,
+        "total_training_time": 19863.95535516739
+      },
+      {
+        "step": 20500,
+        "train_loss": null,
+        "val_bpb": 0.9011351231898916,
+        "total_training_time": 19960.684281349182
+      },
+      {
+        "step": 20500,
+        "train_loss": 3.0547599430138086,
+        "val_bpb": null,
+        "total_training_time": 19961.652594089508
+      },
+      {
+        "step": 20600,
+        "train_loss": 3.1231651554865074,
+        "val_bpb": null,
+        "total_training_time": 20059.40667271614
+      },
+      {
+        "step": 20700,
+        "train_loss": 2.9775878999637255,
+        "val_bpb": null,
+        "total_training_time": 20157.087960720062
+      },
+      {
+        "step": 20750,
+        "train_loss": null,
+        "val_bpb": 0.8995228656777965,
+        "total_training_time": 20204.966782808304
+      },
+      {
+        "step": 20800,
+        "train_loss": 3.0016900609574977,
+        "val_bpb": null,
+        "total_training_time": 20254.756413459778
+      },
+      {
+        "step": 20900,
+        "train_loss": 3.0694285770074377,
+        "val_bpb": null,
+        "total_training_time": 20352.486354351044
+      },
+      {
+        "step": 21000,
+        "train_loss": null,
+        "val_bpb": 0.8977625370734209,
+        "total_training_time": 20449.179080724716
+      },
+      {
+        "step": 21000,
+        "train_loss": 3.0337057919216055,
+        "val_bpb": null,
+        "total_training_time": 20450.14400792122
+      },
+      {
+        "step": 21100,
+        "train_loss": 3.1043660181482293,
+        "val_bpb": null,
+        "total_training_time": 20547.75514960289
+      },
+      {
+        "step": 21200,
+        "train_loss": 2.997699166207768,
+        "val_bpb": null,
+        "total_training_time": 20645.46787762642
+      },
+      {
+        "step": 21250,
+        "train_loss": null,
+        "val_bpb": 0.8962583021856647,
+        "total_training_time": 20693.30056810379
+      },
+      {
+        "step": 21300,
+        "train_loss": 2.919849864248239,
+        "val_bpb": null,
+        "total_training_time": 20743.14754509926
+      },
+      {
+        "step": 21400,
+        "train_loss": 2.9177238657913493,
+        "val_bpb": null,
+        "total_training_time": 20840.925540685654
+      },
+      {
+        "step": 21500,
+        "train_loss": null,
+        "val_bpb": 0.8946246854906674,
+        "total_training_time": 20937.617552757263
+      },
+      {
+        "step": 21500,
+        "train_loss": 2.96050880051564,
+        "val_bpb": null,
+        "total_training_time": 20938.580363988876
+      },
+      {
+        "step": 21600,
+        "train_loss": 3.0437191715348684,
+        "val_bpb": null,
+        "total_training_time": 21036.33189058304
+      },
+      {
+        "step": 21700,
+        "train_loss": 3.016836673423448,
+        "val_bpb": null,
+        "total_training_time": 21134.10258102417
+      },
+      {
+        "step": 21750,
+        "train_loss": null,
+        "val_bpb": 0.8931776730084562,
+        "total_training_time": 21182.172488689423
+      },
+      {
+        "step": 21800,
+        "train_loss": 3.0169657146424878,
+        "val_bpb": null,
+        "total_training_time": 21232.080663204193
+      },
+      {
+        "step": 21900,
+        "train_loss": 2.9066113970531426,
+        "val_bpb": null,
+        "total_training_time": 21329.972006082535
+      },
+      {
+        "step": 22000,
+        "train_loss": null,
+        "val_bpb": 0.8918086648394784,
+        "total_training_time": 21426.79233956337
+      }
+    ]
+  },
+  "l0_abl": {
+    "name": "my-kaggle-d8-L0-abl",
+    "url": "https://wandb.ai/hbpkillerx/nanochat/runs/ixxaq73z",
+    "state": "finished",
+    "config": {
+      "depth": 8,
+      "num_iterations": 22000,
+      "device_batch_size": 4,
+      "max_seq_len": 1024,
+      "total_batch_size": 65536,
+      "model_tag": "kaggle-d8",
+      "run": "my-kaggle-d8-L0-abl"
+    },
+    "summary": {
+      "step": 22000,
+      "train_loss": 2.917985795642697,
+      "val_bpb": 0.8968076517107768,
+      "total_training_time": 20450.080719947815,
+      "_runtime": 20769
+    },
+    "history": [
+      {
+        "step": 0,
+        "train_loss": null,
+        "val_bpb": 3.1427053127491815,
+        "total_training_time": 0
+      },
+      {
+        "step": 0,
+        "train_loss": 10.397736549377441,
+        "val_bpb": null,
+        "total_training_time": 0
+      },
+      {
+        "step": 100,
+        "train_loss": 5.5807597696433415,
+        "val_bpb": null,
+        "total_training_time": 79.55851721763611
+      },
+      {
+        "step": 200,
+        "train_loss": 4.7605665667405495,
+        "val_bpb": null,
+        "total_training_time": 173.1332881450653
+      },
+      {
+        "step": 250,
+        "train_loss": null,
+        "val_bpb": 1.3478930291722937,
+        "total_training_time": 218.9277560710907
+      },
+      {
+        "step": 300,
+        "train_loss": 4.392904658506411,
+        "val_bpb": null,
+        "total_training_time": 266.4791612625122
+      },
+      {
+        "step": 400,
+        "train_loss": 4.302386984132811,
+        "val_bpb": null,
+        "total_training_time": 359.6247367858887
+      },
+      {
+        "step": 500,
+        "train_loss": null,
+        "val_bpb": 1.2015497937655755,
+        "total_training_time": 451.9362761974335
+      },
+      {
+        "step": 500,
+        "train_loss": 3.9342337446686595,
+        "val_bpb": null,
+        "total_training_time": 452.80712938308716
+      },
+      {
+        "step": 600,
+        "train_loss": 3.9248355084494526,
+        "val_bpb": null,
+        "total_training_time": 545.8964290618896
+      },
+      {
+        "step": 700,
+        "train_loss": 3.8100585746878703,
+        "val_bpb": null,
+        "total_training_time": 638.7152485847473
+      },
+      {
+        "step": 750,
+        "train_loss": null,
+        "val_bpb": 1.1446220150577189,
+        "total_training_time": 684.2607619762421
+      },
+      {
+        "step": 800,
+        "train_loss": 3.8285286807357664,
+        "val_bpb": null,
+        "total_training_time": 731.6697919368744
+      },
+      {
+        "step": 900,
+        "train_loss": 3.7268996041671745,
+        "val_bpb": null,
+        "total_training_time": 824.3260078430176
+      },
+      {
+        "step": 1000,
+        "train_loss": null,
+        "val_bpb": 1.1181950773745681,
+        "total_training_time": 916.1829118728638
+      },
+      {
+        "step": 1000,
+        "train_loss": 3.8215835816959216,
+        "val_bpb": null,
+        "total_training_time": 917.0571975708008
+      },
+      {
+        "step": 1100,
+        "train_loss": 3.6897940385251786,
+        "val_bpb": null,
+        "total_training_time": 1009.7945716381073
+      },
+      {
+        "step": 1200,
+        "train_loss": 3.655775962035699,
+        "val_bpb": null,
+        "total_training_time": 1102.5814819335938
+      },
+      {
+        "step": 1250,
+        "train_loss": null,
+        "val_bpb": 1.100462265204768,
+        "total_training_time": 1148.0405130386353
+      },
+      {
+        "step": 1300,
+        "train_loss": 3.679904722073251,
+        "val_bpb": null,
+        "total_training_time": 1195.418134212494
+      },
+      {
+        "step": 1400,
+        "train_loss": 3.5833711201758183,
+        "val_bpb": null,
+        "total_training_time": 1287.99063539505
+      },
+      {
+        "step": 1500,
+        "train_loss": null,
+        "val_bpb": 1.0875569891678365,
+        "total_training_time": 1379.6021077632904
+      },
+      {
+        "step": 1500,
+        "train_loss": 3.648255149324508,
+        "val_bpb": null,
+        "total_training_time": 1380.474575996399
+      },
+      {
+        "step": 1600,
+        "train_loss": 3.543490487407696,
+        "val_bpb": null,
+        "total_training_time": 1473.2185986042023
+      },
+      {
+        "step": 1700,
+        "train_loss": 3.6822653433189307,
+        "val_bpb": null,
+        "total_training_time": 1565.7767775058746
+      },
+      {
+        "step": 1750,
+        "train_loss": null,
+        "val_bpb": 1.0778557348850137,
+        "total_training_time": 1611.1020576953888
+      },
+      {
+        "step": 1800,
+        "train_loss": 3.5484556027687715,
+        "val_bpb": null,
+        "total_training_time": 1658.3653817176819
+      },
+      {
+        "step": 1900,
+        "train_loss": 3.6226190987147957,
+        "val_bpb": null,
+        "total_training_time": 1751.0541677474976
+      },
+      {
+        "step": 2000,
+        "train_loss": null,
+        "val_bpb": 1.0697038151160072,
+        "total_training_time": 1842.846070766449
+      },
+      {
+        "step": 2000,
+        "train_loss": 3.544900952801054,
+        "val_bpb": null,
+        "total_training_time": 1843.7206935882568
+      },
+      {
+        "step": 2100,
+        "train_loss": 3.630959946054127,
+        "val_bpb": null,
+        "total_training_time": 1936.6540458202362
+      },
+      {
+        "step": 2200,
+        "train_loss": 3.5267871070337757,
+        "val_bpb": null,
+        "total_training_time": 2029.2717154026031
+      },
+      {
+        "step": 2250,
+        "train_loss": null,
+        "val_bpb": 1.0651505568689854,
+        "total_training_time": 2074.782078742981
+      },
+      {
+        "step": 2300,
+        "train_loss": 3.5958586709448386,
+        "val_bpb": null,
+        "total_training_time": 2122.081527709961
+      },
+      {
+        "step": 2400,
+        "train_loss": 3.610923920391933,
+        "val_bpb": null,
+        "total_training_time": 2214.73312664032
+      },
+      {
+        "step": 2500,
+        "train_loss": null,
+        "val_bpb": 1.0586652306415514,
+        "total_training_time": 2306.7051990032196
+      },
+      {
+        "step": 2500,
+        "train_loss": 3.6225555200818476,
+        "val_bpb": null,
+        "total_training_time": 2307.59121632576
+      },
+      {
+        "step": 2600,
+        "train_loss": 3.5351326685318814,
+        "val_bpb": null,
+        "total_training_time": 2400.37335395813
+      },
+      {
+        "step": 2700,
+        "train_loss": 3.489349903970931,
+        "val_bpb": null,
+        "total_training_time": 2493.198621034622
+      },
+      {
+        "step": 2750,
+        "train_loss": null,
+        "val_bpb": 1.0542243245829703,
+        "total_training_time": 2538.665401697159
+      },
+      {
+        "step": 2800,
+        "train_loss": 3.4885120165245187,
+        "val_bpb": null,
+        "total_training_time": 2585.951064825058
+      },
+      {
+        "step": 2900,
+        "train_loss": 3.563393996809748,
+        "val_bpb": null,
+        "total_training_time": 2678.622474193573
+      },
+      {
+        "step": 3000,
+        "train_loss": null,
+        "val_bpb": 1.0523605193965626,
+        "total_training_time": 2770.3636622428894
+      },
+      {
+        "step": 3000,
+        "train_loss": 3.4951210640454438,
+        "val_bpb": null,
+        "total_training_time": 2771.2416088581085
+      },
+      {
+        "step": 3100,
+        "train_loss": 3.447877257459309,
+        "val_bpb": null,
+        "total_training_time": 2863.9666430950165
+      },
+      {
+        "step": 3200,
+        "train_loss": 3.534135987799975,
+        "val_bpb": null,
+        "total_training_time": 2956.685298204422
+      },
+      {
+        "step": 3250,
+        "train_loss": null,
+        "val_bpb": 1.0493255671206276,
+        "total_training_time": 3002.0853798389435
+      },
+      {
+        "step": 3300,
+        "train_loss": 3.6075554695904133,
+        "val_bpb": null,
+        "total_training_time": 3049.493503332138
+      },
+      {
+        "step": 3400,
+        "train_loss": 3.600238885850255,
+        "val_bpb": null,
+        "total_training_time": 3142.1970348358154
+      },
+      {
+        "step": 3500,
+        "train_loss": null,
+        "val_bpb": 1.0454892125294561,
+        "total_training_time": 3234.1808111667633
+      },
+      {
+        "step": 3500,
+        "train_loss": 3.4209711454409257,
+        "val_bpb": null,
+        "total_training_time": 3235.053300142288
+      },
+      {
+        "step": 3600,
+        "train_loss": 3.45213647639534,
+        "val_bpb": null,
+        "total_training_time": 3327.85542178154
+      },
+      {
+        "step": 3700,
+        "train_loss": 3.474078902122255,
+        "val_bpb": null,
+        "total_training_time": 3420.5823426246643
+      },
+      {
+        "step": 3750,
+        "train_loss": null,
+        "val_bpb": 1.0442399168078922,
+        "total_training_time": 3465.9001824855804
+      },
+      {
+        "step": 3800,
+        "train_loss": 3.406928725809272,
+        "val_bpb": null,
+        "total_training_time": 3513.167553663254
+      },
+      {
+        "step": 3900,
+        "train_loss": 3.512723690112116,
+        "val_bpb": null,
+        "total_training_time": 3605.955051422119
+      },
+      {
+        "step": 4000,
+        "train_loss": null,
+        "val_bpb": 1.0417198940224603,
+        "total_training_time": 3697.762045621872
+      },
+      {
+        "step": 4000,
+        "train_loss": 3.428059535067247,
+        "val_bpb": null,
+        "total_training_time": 3698.634457588196
+      },
+      {
+        "step": 4100,
+        "train_loss": 3.5032284517628747,
+        "val_bpb": null,
+        "total_training_time": 3791.701874732971
+      },
+      {
+        "step": 4200,
+        "train_loss": 3.4046468423048313,
+        "val_bpb": null,
+        "total_training_time": 3884.6913385391235
+      },
+      {
+        "step": 4250,
+        "train_loss": null,
+        "val_bpb": 1.0437222452601245,
+        "total_training_time": 3929.827735900879
+      },
+      {
+        "step": 4300,
+        "train_loss": 3.4574805000551043,
+        "val_bpb": null,
+        "total_training_time": 3977.014616727829
+      },
+      {
+        "step": 4400,
+        "train_loss": 3.480679650441121,
+        "val_bpb": null,
+        "total_training_time": 4069.7036216259003
+      },
+      {
+        "step": 4500,
+        "train_loss": null,
+        "val_bpb": 1.036805189332343,
+        "total_training_time": 4161.207174062729
+      },
+      {
+        "step": 4500,
+        "train_loss": 3.5294865279689716,
+        "val_bpb": null,
+        "total_training_time": 4162.081099271774
+      },
+      {
+        "step": 4600,
+        "train_loss": 3.474797024244568,
+        "val_bpb": null,
+        "total_training_time": 4254.503590106964
+      },
+      {
+        "step": 4700,
+        "train_loss": 3.5009701036260106,
+        "val_bpb": null,
+        "total_training_time": 4346.8177807331085
+      },
+      {
+        "step": 4750,
+        "train_loss": null,
+        "val_bpb": 1.0342991654708402,
+        "total_training_time": 4392.046567201614
+      },
+      {
+        "step": 4800,
+        "train_loss": 3.5078252365913793,
+        "val_bpb": null,
+        "total_training_time": 4439.217190980911
+      },
+      {
+        "step": 4900,
+        "train_loss": 3.5297587010434848,
+        "val_bpb": null,
+        "total_training_time": 4531.816585063934
+      },
+      {
+        "step": 5000,
+        "train_loss": null,
+        "val_bpb": 1.0341694950259923,
+        "total_training_time": 4623.499929904938
+      },
+      {
+        "step": 5000,
+        "train_loss": 3.423015860482575,
+        "val_bpb": null,
+        "total_training_time": 4624.3696575164795
+      },
+      {
+        "step": 5100,
+        "train_loss": 3.4880164927123363,
+        "val_bpb": null,
+        "total_training_time": 4716.988541126251
+      },
+      {
+        "step": 5200,
+        "train_loss": 3.3787262849525463,
+        "val_bpb": null,
+        "total_training_time": 4809.40195775032
+      },
+      {
+        "step": 5250,
+        "train_loss": null,
+        "val_bpb": 1.0320732644067216,
+        "total_training_time": 4854.801325082779
+      },
+      {
+        "step": 5300,
+        "train_loss": 3.5539568263962944,
+        "val_bpb": null,
+        "total_training_time": 4902.019598722458
+      },
+      {
+        "step": 5400,
+        "train_loss": 3.290473976604972,
+        "val_bpb": null,
+        "total_training_time": 4994.442828655243
+      },
+      {
+        "step": 5500,
+        "train_loss": null,
+        "val_bpb": 1.0304376272484768,
+        "total_training_time": 5085.891372919083
+      },
+      {
+        "step": 5500,
+        "train_loss": 3.440532722475311,
+        "val_bpb": null,
+        "total_training_time": 5086.766019105911
+      },
+      {
+        "step": 5600,
+        "train_loss": 3.3926822977293773,
+        "val_bpb": null,
+        "total_training_time": 5179.263069391251
+      },
+      {
+        "step": 5700,
+        "train_loss": 3.496596836945831,
+        "val_bpb": null,
+        "total_training_time": 5271.727573871613
+      },
+      {
+        "step": 5750,
+        "train_loss": null,
+        "val_bpb": 1.0291770746602482,
+        "total_training_time": 5317.0189826488495
+      },
+      {
+        "step": 5800,
+        "train_loss": 3.4487494096818496,
+        "val_bpb": null,
+        "total_training_time": 5364.134985923767
+      },
+      {
+        "step": 5900,
+        "train_loss": 3.51971478801599,
+        "val_bpb": null,
+        "total_training_time": 5456.484643697739
+      },
+      {
+        "step": 6000,
+        "train_loss": null,
+        "val_bpb": 1.0279624876109,
+        "total_training_time": 5547.960106134415
+      },
+      {
+        "step": 6000,
+        "train_loss": 3.5143999674980324,
+        "val_bpb": null,
+        "total_training_time": 5548.833072423935
+      },
+      {
+        "step": 6100,
+        "train_loss": 3.448761658757718,
+        "val_bpb": null,
+        "total_training_time": 5641.291844129562
+      },
+      {
+        "step": 6200,
+        "train_loss": 3.4118418951385747,
+        "val_bpb": null,
+        "total_training_time": 5733.788816452026
+      },
+      {
+        "step": 6250,
+        "train_loss": null,
+        "val_bpb": 1.0264288838466535,
+        "total_training_time": 5779.023610591888
+      },
+      {
+        "step": 6300,
+        "train_loss": 3.4555216884372943,
+        "val_bpb": null,
+        "total_training_time": 5826.229363441467
+      },
+      {
+        "step": 6400,
+        "train_loss": 3.41701989293564,
+        "val_bpb": null,
+        "total_training_time": 5918.638109922409
+      },
+      {
+        "step": 6500,
+        "train_loss": null,
+        "val_bpb": 1.025500697462637,
+        "total_training_time": 6010.3037984371185
+      },
+      {
+        "step": 6500,
+        "train_loss": 3.3630381243467635,
+        "val_bpb": null,
+        "total_training_time": 6011.176068782806
+      },
+      {
+        "step": 6600,
+        "train_loss": 3.3705401058018,
+        "val_bpb": null,
+        "total_training_time": 6103.834293842316
+      },
+      {
+        "step": 6700,
+        "train_loss": 3.435010299794695,
+        "val_bpb": null,
+        "total_training_time": 6196.555058002472
+      },
+      {
+        "step": 6750,
+        "train_loss": null,
+        "val_bpb": 1.0250357022781076,
+        "total_training_time": 6241.940360546112
+      },
+      {
+        "step": 6800,
+        "train_loss": 3.4506981723123515,
+        "val_bpb": null,
+        "total_training_time": 6289.077030420303
+      },
+      {
+        "step": 6900,
+        "train_loss": 3.387742077552538,
+        "val_bpb": null,
+        "total_training_time": 6381.782628774643
+      },
+      {
+        "step": 7000,
+        "train_loss": null,
+        "val_bpb": 1.0231375492164925,
+        "total_training_time": 6473.568670988083
+      },
+      {
+        "step": 7000,
+        "train_loss": 3.509641542248975,
+        "val_bpb": null,
+        "total_training_time": 6474.441836833954
+      },
+      {
+        "step": 7100,
+        "train_loss": 3.476283800602818,
+        "val_bpb": null,
+        "total_training_time": 6567.169720649719
+      },
+      {
+        "step": 7200,
+        "train_loss": 3.393799030105457,
+        "val_bpb": null,
+        "total_training_time": 6659.702404022217
+      },
+      {
+        "step": 7250,
+        "train_loss": null,
+        "val_bpb": 1.0215363320928568,
+        "total_training_time": 6705.007483243942
+      },
+      {
+        "step": 7300,
+        "train_loss": 3.361041228813689,
+        "val_bpb": null,
+        "total_training_time": 6752.3404858112335
+      },
+      {
+        "step": 7400,
+        "train_loss": 3.504674137365541,
+        "val_bpb": null,
+        "total_training_time": 6844.83626127243
+      },
+      {
+        "step": 7500,
+        "train_loss": null,
+        "val_bpb": 1.0201513766961041,
+        "total_training_time": 6936.630143880844
+      },
+      {
+        "step": 7500,
+        "train_loss": 3.4168400354554063,
+        "val_bpb": null,
+        "total_training_time": 6937.503547430038
+      },
+      {
+        "step": 7600,
+        "train_loss": 3.4100423521924292,
+        "val_bpb": null,
+        "total_training_time": 7030.145591974258
+      },
+      {
+        "step": 7700,
+        "train_loss": 3.4511981902311697,
+        "val_bpb": null,
+        "total_training_time": 7122.827610492706
+      },
+      {
+        "step": 7750,
+        "train_loss": null,
+        "val_bpb": 1.019246353480032,
+        "total_training_time": 7168.254514455795
+      },
+      {
+        "step": 7800,
+        "train_loss": 3.4719266071255928,
+        "val_bpb": null,
+        "total_training_time": 7215.507659912109
+      },
+      {
+        "step": 7900,
+        "train_loss": 3.441171130706998,
+        "val_bpb": null,
+        "total_training_time": 7308.261140346527
+      },
+      {
+        "step": 8000,
+        "train_loss": null,
+        "val_bpb": 1.0149462304141599,
+        "total_training_time": 7399.992208003998
+      },
+      {
+        "step": 8000,
+        "train_loss": 3.462638430114827,
+        "val_bpb": null,
+        "total_training_time": 7400.866011381149
+      },
+      {
+        "step": 8100,
+        "train_loss": 3.342436629232534,
+        "val_bpb": null,
+        "total_training_time": 7493.686388969421
+      },
+      {
+        "step": 8200,
+        "train_loss": 3.3718652042422934,
+        "val_bpb": null,
+        "total_training_time": 7586.441503286362
+      },
+      {
+        "step": 8250,
+        "train_loss": null,
+        "val_bpb": 1.0132960892161742,
+        "total_training_time": 7631.944592475891
+      },
+      {
+        "step": 8300,
+        "train_loss": 3.4323515463456276,
+        "val_bpb": null,
+        "total_training_time": 7679.291166305542
+      },
+      {
+        "step": 8400,
+        "train_loss": 3.3566931091716317,
+        "val_bpb": null,
+        "total_training_time": 7772.080411672592
+      },
+      {
+        "step": 8500,
+        "train_loss": null,
+        "val_bpb": 1.00982507767579,
+        "total_training_time": 7864.113029956818
+      },
+      {
+        "step": 8500,
+        "train_loss": 3.3966222616830595,
+        "val_bpb": null,
+        "total_training_time": 7864.987347364426
+      },
+      {
+        "step": 8600,
+        "train_loss": 3.438807946837119,
+        "val_bpb": null,
+        "total_training_time": 7957.958478689194
+      },
+      {
+        "step": 8700,
+        "train_loss": 3.385182745892287,
+        "val_bpb": null,
+        "total_training_time": 8050.914656877518
+      },
+      {
+        "step": 8750,
+        "train_loss": null,
+        "val_bpb": 1.0067959703113925,
+        "total_training_time": 8096.493809223175
+      },
+      {
+        "step": 8800,
+        "train_loss": 3.383066392189464,
+        "val_bpb": null,
+        "total_training_time": 8144.032133579254
+      },
+      {
+        "step": 8900,
+        "train_loss": 3.3299881126930675,
+        "val_bpb": null,
+        "total_training_time": 8236.65385055542
+      },
+      {
+        "step": 9000,
+        "train_loss": null,
+        "val_bpb": 1.0056871689449307,
+        "total_training_time": 8328.478945732117
+      },
+      {
+        "step": 9000,
+        "train_loss": 3.3198177513271094,
+        "val_bpb": null,
+        "total_training_time": 8329.353336334229
+      },
+      {
+        "step": 9100,
+        "train_loss": 3.3292233938357736,
+        "val_bpb": null,
+        "total_training_time": 8422.30897283554
+      },
+      {
+        "step": 9200,
+        "train_loss": 3.2427001970608664,
+        "val_bpb": null,
+        "total_training_time": 8515.23857331276
+      },
+      {
+        "step": 9250,
+        "train_loss": null,
+        "val_bpb": 1.0038543201418506,
+        "total_training_time": 8560.533102035522
+      },
+      {
+        "step": 9300,
+        "train_loss": 3.409791611587957,
+        "val_bpb": null,
+        "total_training_time": 8607.95034646988
+      },
+      {
+        "step": 9400,
+        "train_loss": 3.2453994860571456,
+        "val_bpb": null,
+        "total_training_time": 8700.634153842926
+      },
+      {
+        "step": 9500,
+        "train_loss": null,
+        "val_bpb": 1.0003183651399399,
+        "total_training_time": 8792.569207668304
+      },
+      {
+        "step": 9500,
+        "train_loss": 3.3728703751044375,
+        "val_bpb": null,
+        "total_training_time": 8793.452563524246
+      },
+      {
+        "step": 9600,
+        "train_loss": 3.4468626971499985,
+        "val_bpb": null,
+        "total_training_time": 8886.515454769135
+      },
+      {
+        "step": 9700,
+        "train_loss": 3.3271540428108337,
+        "val_bpb": null,
+        "total_training_time": 8979.478234767914
+      },
+      {
+        "step": 9750,
+        "train_loss": null,
+        "val_bpb": 0.9981375637018813,
+        "total_training_time": 9025.02271080017
+      },
+      {
+        "step": 9800,
+        "train_loss": 3.367955028154215,
+        "val_bpb": null,
+        "total_training_time": 9072.467557907104
+      },
+      {
+        "step": 9900,
+        "train_loss": 3.339599883638162,
+        "val_bpb": null,
+        "total_training_time": 9165.291580438614
+      },
+      {
+        "step": 10000,
+        "train_loss": null,
+        "val_bpb": 0.9952630217759169,
+        "total_training_time": 9257.335673809052
+      },
+      {
+        "step": 10000,
+        "train_loss": 3.418266140841182,
+        "val_bpb": null,
+        "total_training_time": 9258.215876340866
+      },
+      {
+        "step": 10100,
+        "train_loss": 3.432409157818338,
+        "val_bpb": null,
+        "total_training_time": 9351.256146907806
+      },
+      {
+        "step": 10200,
+        "train_loss": 3.391183300743531,
+        "val_bpb": null,
+        "total_training_time": 9444.178663015366
+      },
+      {
+        "step": 10250,
+        "train_loss": null,
+        "val_bpb": 0.9935578951138387,
+        "total_training_time": 9489.849905490875
+      },
+      {
+        "step": 10300,
+        "train_loss": 3.294260168423919,
+        "val_bpb": null,
+        "total_training_time": 9537.364823579788
+      },
+      {
+        "step": 10400,
+        "train_loss": 3.450011086369814,
+        "val_bpb": null,
+        "total_training_time": 9630.480448007584
+      },
+      {
+        "step": 10500,
+        "train_loss": null,
+        "val_bpb": 0.9911248244074508,
+        "total_training_time": 9722.623426914215
+      },
+      {
+        "step": 10500,
+        "train_loss": 3.30778823585981,
+        "val_bpb": null,
+        "total_training_time": 9723.499584913254
+      },
+      {
+        "step": 10600,
+        "train_loss": 3.4145311966390017,
+        "val_bpb": null,
+        "total_training_time": 9816.563299179077
+      },
+      {
+        "step": 10700,
+        "train_loss": 3.3604006483584103,
+        "val_bpb": null,
+        "total_training_time": 9909.787655353546
+      },
+      {
+        "step": 10750,
+        "train_loss": null,
+        "val_bpb": 0.9899640682717679,
+        "total_training_time": 9955.27851986885
+      },
+      {
+        "step": 10800,
+        "train_loss": 3.3877732338698454,
+        "val_bpb": null,
+        "total_training_time": 10002.793407201767
+      },
+      {
+        "step": 10900,
+        "train_loss": 3.2534313066953424,
+        "val_bpb": null,
+        "total_training_time": 10095.945704221725
+      },
+      {
+        "step": 11000,
+        "train_loss": null,
+        "val_bpb": 0.987174818758608,
+        "total_training_time": 10188.073408842087
+      },
+      {
+        "step": 11000,
+        "train_loss": 3.292925232378871,
+        "val_bpb": null,
+        "total_training_time": 10188.95358657837
+      },
+      {
+        "step": 11100,
+        "train_loss": 3.3059049950347603,
+        "val_bpb": null,
+        "total_training_time": 10282.15277004242
+      },
+      {
+        "step": 11200,
+        "train_loss": 3.2989352000407037,
+        "val_bpb": null,
+        "total_training_time": 10375.214889287949
+      },
+      {
+        "step": 11250,
+        "train_loss": null,
+        "val_bpb": 0.9851699419418845,
+        "total_training_time": 10420.60709118843
+      },
+      {
+        "step": 11300,
+        "train_loss": 3.2969023795223187,
+        "val_bpb": null,
+        "total_training_time": 10468.225167036057
+      },
+      {
+        "step": 11400,
+        "train_loss": 3.376007634537636,
+        "val_bpb": null,
+        "total_training_time": 10561.286255836487
+      },
+      {
+        "step": 11500,
+        "train_loss": null,
+        "val_bpb": 0.9836677275173757,
+        "total_training_time": 10653.495708227158
+      },
+      {
+        "step": 11500,
+        "train_loss": 3.2594673816956763,
+        "val_bpb": null,
+        "total_training_time": 10654.3735704422
+      },
+      {
+        "step": 11600,
+        "train_loss": 3.300645355603009,
+        "val_bpb": null,
+        "total_training_time": 10747.647431135178
+      },
+      {
+        "step": 11700,
+        "train_loss": 3.193147065342529,
+        "val_bpb": null,
+        "total_training_time": 10840.722556591034
+      },
+      {
+        "step": 11750,
+        "train_loss": null,
+        "val_bpb": 0.9805597499269244,
+        "total_training_time": 10886.416816949844
+      },
+      {
+        "step": 11800,
+        "train_loss": 3.2244308197461087,
+        "val_bpb": null,
+        "total_training_time": 10933.895640611649
+      },
+      {
+        "step": 11900,
+        "train_loss": 3.3221896712989443,
+        "val_bpb": null,
+        "total_training_time": 11027.095658302307
+      },
+      {
+        "step": 12000,
+        "train_loss": null,
+        "val_bpb": 0.9793505026733017,
+        "total_training_time": 11119.357390642166
+      },
+      {
+        "step": 12000,
+        "train_loss": 3.377015727170501,
+        "val_bpb": null,
+        "total_training_time": 11120.236123085022
+      },
+      {
+        "step": 12100,
+        "train_loss": 3.291440966366331,
+        "val_bpb": null,
+        "total_training_time": 11213.351664066315
+      },
+      {
+        "step": 12200,
+        "train_loss": 3.238178367586613,
+        "val_bpb": null,
+        "total_training_time": 11306.519449710846
+      },
+      {
+        "step": 12250,
+        "train_loss": null,
+        "val_bpb": 0.976417583791365,
+        "total_training_time": 11352.294108629227
+      },
+      {
+        "step": 12300,
+        "train_loss": 3.2699559421970976,
+        "val_bpb": null,
+        "total_training_time": 11399.89104104042
+      },
+      {
+        "step": 12400,
+        "train_loss": 3.3058548870686724,
+        "val_bpb": null,
+        "total_training_time": 11493.278429985046
+      },
+      {
+        "step": 12500,
+        "train_loss": null,
+        "val_bpb": 0.9746576159839979,
+        "total_training_time": 11585.68379187584
+      },
+      {
+        "step": 12500,
+        "train_loss": 3.259735330052701,
+        "val_bpb": null,
+        "total_training_time": 11586.56085395813
+      },
+      {
+        "step": 12600,
+        "train_loss": 3.3230355448475595,
+        "val_bpb": null,
+        "total_training_time": 11679.897499322891
+      },
+      {
+        "step": 12700,
+        "train_loss": 3.2646392915584928,
+        "val_bpb": null,
+        "total_training_time": 11773.118094682693
+      },
+      {
+        "step": 12750,
+        "train_loss": null,
+        "val_bpb": 0.9727770698163968,
+        "total_training_time": 11818.761551380157
+      },
+      {
+        "step": 12800,
+        "train_loss": 3.2831393704891427,
+        "val_bpb": null,
+        "total_training_time": 11866.28535103798
+      },
+      {
+        "step": 12900,
+        "train_loss": 3.272046099905916,
+        "val_bpb": null,
+        "total_training_time": 11959.47656083107
+      },
+      {
+        "step": 13000,
+        "train_loss": null,
+        "val_bpb": 0.9698606754374485,
+        "total_training_time": 12051.943002700806
+      },
+      {
+        "step": 13000,
+        "train_loss": 3.296467310542877,
+        "val_bpb": null,
+        "total_training_time": 12052.816386461258
+      },
+      {
+        "step": 13100,
+        "train_loss": 3.1808951279393143,
+        "val_bpb": null,
+        "total_training_time": 12146.159036636353
+      },
+      {
+        "step": 13200,
+        "train_loss": 3.238203685866271,
+        "val_bpb": null,
+        "total_training_time": 12239.33193731308
+      },
+      {
+        "step": 13250,
+        "train_loss": null,
+        "val_bpb": 0.9679436166125891,
+        "total_training_time": 12285.073022603989
+      },
+      {
+        "step": 13300,
+        "train_loss": 3.22566471820522,
+        "val_bpb": null,
+        "total_training_time": 12332.643922805786
+      },
+      {
+        "step": 13400,
+        "train_loss": 3.2032604381608465,
+        "val_bpb": null,
+        "total_training_time": 12426.217734336853
+      },
+      {
+        "step": 13500,
+        "train_loss": null,
+        "val_bpb": 0.9652967375989756,
+        "total_training_time": 12518.540601968765
+      },
+      {
+        "step": 13500,
+        "train_loss": 3.2260732500780795,
+        "val_bpb": null,
+        "total_training_time": 12519.419387817383
+      },
+      {
+        "step": 13600,
+        "train_loss": 3.1482426156999814,
+        "val_bpb": null,
+        "total_training_time": 12612.76001548767
+      },
+      {
+        "step": 13700,
+        "train_loss": 3.254600739466828,
+        "val_bpb": null,
+        "total_training_time": 12706.236751794815
+      },
+      {
+        "step": 13750,
+        "train_loss": null,
+        "val_bpb": 0.9634026254638555,
+        "total_training_time": 12751.849294424057
+      },
+      {
+        "step": 13800,
+        "train_loss": 3.2069642628150206,
+        "val_bpb": null,
+        "total_training_time": 12799.390471458435
+      },
+      {
+        "step": 13900,
+        "train_loss": 3.2741671669035757,
+        "val_bpb": null,
+        "total_training_time": 12892.884391069412
+      },
+      {
+        "step": 14000,
+        "train_loss": null,
+        "val_bpb": 0.9611761471245234,
+        "total_training_time": 12985.488092660904
+      },
+      {
+        "step": 14000,
+        "train_loss": 3.225991322031712,
+        "val_bpb": null,
+        "total_training_time": 12986.36601138115
+      },
+      {
+        "step": 14100,
+        "train_loss": 3.152268727423434,
+        "val_bpb": null,
+        "total_training_time": 13079.86081814766
+      },
+      {
+        "step": 14200,
+        "train_loss": 3.279618327970056,
+        "val_bpb": null,
+        "total_training_time": 13173.238537549973
+      },
+      {
+        "step": 14250,
+        "train_loss": null,
+        "val_bpb": 0.9583065841972759,
+        "total_training_time": 13218.766407251358
+      },
+      {
+        "step": 14300,
+        "train_loss": 3.239428487449339,
+        "val_bpb": null,
+        "total_training_time": 13266.405844926834
+      },
+      {
+        "step": 14400,
+        "train_loss": 3.3210842896997774,
+        "val_bpb": null,
+        "total_training_time": 13359.827760696411
+      },
+      {
+        "step": 14500,
+        "train_loss": null,
+        "val_bpb": 0.9566179098787845,
+        "total_training_time": 13452.118448972702
+      },
+      {
+        "step": 14500,
+        "train_loss": 3.2289142546489327,
+        "val_bpb": null,
+        "total_training_time": 13452.997961997986
+      },
+      {
+        "step": 14600,
+        "train_loss": 3.234687709036785,
+        "val_bpb": null,
+        "total_training_time": 13546.45884180069
+      },
+      {
+        "step": 14700,
+        "train_loss": 3.228624192132557,
+        "val_bpb": null,
+        "total_training_time": 13639.959348917007
+      },
+      {
+        "step": 14750,
+        "train_loss": null,
+        "val_bpb": 0.9547297869740051,
+        "total_training_time": 13685.720022439957
+      },
+      {
+        "step": 14800,
+        "train_loss": 3.2544421108506674,
+        "val_bpb": null,
+        "total_training_time": 13733.381768226624
+      },
+      {
+        "step": 14900,
+        "train_loss": 3.189694220174983,
+        "val_bpb": null,
+        "total_training_time": 13826.618733167648
+      },
+      {
+        "step": 15000,
+        "train_loss": null,
+        "val_bpb": 0.9519795035377613,
+        "total_training_time": 13918.912972450256
+      },
+      {
+        "step": 15000,
+        "train_loss": 3.2228600056385757,
+        "val_bpb": null,
+        "total_training_time": 13919.806707382202
+      },
+      {
+        "step": 15100,
+        "train_loss": 3.2675751907739543,
+        "val_bpb": null,
+        "total_training_time": 14013.357508659363
+      },
+      {
+        "step": 15200,
+        "train_loss": 3.2303737094004896,
+        "val_bpb": null,
+        "total_training_time": 14106.739573001862
+      },
+      {
+        "step": 15250,
+        "train_loss": null,
+        "val_bpb": 0.950586394128617,
+        "total_training_time": 14152.589119195938
+      },
+      {
+        "step": 15300,
+        "train_loss": 3.114004810494075,
+        "val_bpb": null,
+        "total_training_time": 14200.270015954971
+      },
+      {
+        "step": 15400,
+        "train_loss": 3.276492401883644,
+        "val_bpb": null,
+        "total_training_time": 14293.441168785095
+      },
+      {
+        "step": 15500,
+        "train_loss": null,
+        "val_bpb": 0.9487088064964853,
+        "total_training_time": 14386.049438476562
+      },
+      {
+        "step": 15500,
+        "train_loss": 3.1796739466012713,
+        "val_bpb": null,
+        "total_training_time": 14386.92636013031
+      },
+      {
+        "step": 15600,
+        "train_loss": 3.1277825381515627,
+        "val_bpb": null,
+        "total_training_time": 14480.277692079544
+      },
+      {
+        "step": 15700,
+        "train_loss": 3.2710426037116673,
+        "val_bpb": null,
+        "total_training_time": 14573.485286951065
+      },
+      {
+        "step": 15750,
+        "train_loss": null,
+        "val_bpb": 0.9467010433036939,
+        "total_training_time": 14619.067333698273
+      },
+      {
+        "step": 15800,
+        "train_loss": 3.150205586603099,
+        "val_bpb": null,
+        "total_training_time": 14666.679760932922
+      },
+      {
+        "step": 15900,
+        "train_loss": 3.1816812669185763,
+        "val_bpb": null,
+        "total_training_time": 14759.953691720963
+      },
+      {
+        "step": 16000,
+        "train_loss": null,
+        "val_bpb": 0.9443954061007012,
+        "total_training_time": 14852.45099568367
+      },
+      {
+        "step": 16000,
+        "train_loss": 3.175277487485756,
+        "val_bpb": null,
+        "total_training_time": 14853.329276561737
+      },
+      {
+        "step": 16100,
+        "train_loss": 3.12815440721371,
+        "val_bpb": null,
+        "total_training_time": 14946.68398809433
+      },
+      {
+        "step": 16200,
+        "train_loss": 3.2472703080136704,
+        "val_bpb": null,
+        "total_training_time": 15039.94361448288
+      },
+      {
+        "step": 16250,
+        "train_loss": null,
+        "val_bpb": 0.9416569568063354,
+        "total_training_time": 15085.57051563263
+      },
+      {
+        "step": 16300,
+        "train_loss": 3.1188457959397207,
+        "val_bpb": null,
+        "total_training_time": 15133.190331459045
+      },
+      {
+        "step": 16400,
+        "train_loss": 3.2201367548741247,
+        "val_bpb": null,
+        "total_training_time": 15226.449132204056
+      },
+      {
+        "step": 16500,
+        "train_loss": null,
+        "val_bpb": 0.9391973314401232,
+        "total_training_time": 15318.711993932724
+      },
+      {
+        "step": 16500,
+        "train_loss": 3.144543145150506,
+        "val_bpb": null,
+        "total_training_time": 15319.601266145706
+      },
+      {
+        "step": 16600,
+        "train_loss": 3.1824368453050145,
+        "val_bpb": null,
+        "total_training_time": 15412.994993448257
+      },
+      {
+        "step": 16700,
+        "train_loss": 3.165604917546857,
+        "val_bpb": null,
+        "total_training_time": 15506.3199801445
+      },
+      {
+        "step": 16750,
+        "train_loss": null,
+        "val_bpb": 0.9373805020242196,
+        "total_training_time": 15552.076481103897
+      },
+      {
+        "step": 16800,
+        "train_loss": 3.244494063038484,
+        "val_bpb": null,
+        "total_training_time": 15599.744483470917
+      },
+      {
+        "step": 16900,
+        "train_loss": 3.1931697426897028,
+        "val_bpb": null,
+        "total_training_time": 15693.078937768936
+      },
+      {
+        "step": 17000,
+        "train_loss": null,
+        "val_bpb": 0.9351398082827533,
+        "total_training_time": 15785.615335941315
+      },
+      {
+        "step": 17000,
+        "train_loss": 3.1460941975630474,
+        "val_bpb": null,
+        "total_training_time": 15786.49623632431
+      },
+      {
+        "step": 17100,
+        "train_loss": 3.1230726260682555,
+        "val_bpb": null,
+        "total_training_time": 15879.798042058945
+      },
+      {
+        "step": 17200,
+        "train_loss": 3.0033416021512185,
+        "val_bpb": null,
+        "total_training_time": 15973.063644886017
+      },
+      {
+        "step": 17250,
+        "train_loss": null,
+        "val_bpb": 0.9334859869552812,
+        "total_training_time": 16018.73375082016
+      },
+      {
+        "step": 17300,
+        "train_loss": 3.183603751223347,
+        "val_bpb": null,
+        "total_training_time": 16066.451068639755
+      },
+      {
+        "step": 17400,
+        "train_loss": 3.15847274880979,
+        "val_bpb": null,
+        "total_training_time": 16159.67925453186
+      },
+      {
+        "step": 17500,
+        "train_loss": null,
+        "val_bpb": 0.9308473341134611,
+        "total_training_time": 16251.980820417404
+      },
+      {
+        "step": 17500,
+        "train_loss": 3.1226137483010485,
+        "val_bpb": null,
+        "total_training_time": 16252.862864494324
+      },
+      {
+        "step": 17600,
+        "train_loss": 3.102110479881751,
+        "val_bpb": null,
+        "total_training_time": 16346.060939073563
+      },
+      {
+        "step": 17700,
+        "train_loss": 3.02483919339028,
+        "val_bpb": null,
+        "total_training_time": 16439.473754405975
+      },
+      {
+        "step": 17750,
+        "train_loss": null,
+        "val_bpb": 0.9286194847454967,
+        "total_training_time": 16485.08864545822
+      },
+      {
+        "step": 17800,
+        "train_loss": 3.1004118977158623,
+        "val_bpb": null,
+        "total_training_time": 16532.761991262436
+      },
+      {
+        "step": 17900,
+        "train_loss": 3.124786459594897,
+        "val_bpb": null,
+        "total_training_time": 16626.076529741287
+      },
+      {
+        "step": 18000,
+        "train_loss": null,
+        "val_bpb": 0.9269002148406862,
+        "total_training_time": 16718.632296562195
+      },
+      {
+        "step": 18000,
+        "train_loss": 3.075117083201535,
+        "val_bpb": null,
+        "total_training_time": 16719.503711938858
+      },
+      {
+        "step": 18100,
+        "train_loss": 3.092876325400428,
+        "val_bpb": null,
+        "total_training_time": 16812.888100385666
+      },
+      {
+        "step": 18200,
+        "train_loss": 3.024700282210619,
+        "val_bpb": null,
+        "total_training_time": 16906.22373509407
+      },
+      {
+        "step": 18250,
+        "train_loss": null,
+        "val_bpb": 0.9246839831363949,
+        "total_training_time": 16951.956813573837
+      },
+      {
+        "step": 18300,
+        "train_loss": 3.078492983290586,
+        "val_bpb": null,
+        "total_training_time": 16999.548250436783
+      },
+      {
+        "step": 18400,
+        "train_loss": 3.175732136823005,
+        "val_bpb": null,
+        "total_training_time": 17092.585235595703
+      },
+      {
+        "step": 18500,
+        "train_loss": null,
+        "val_bpb": 0.9218437169262359,
+        "total_training_time": 17184.75351548195
+      },
+      {
+        "step": 18500,
+        "train_loss": 3.145188822762006,
+        "val_bpb": null,
+        "total_training_time": 17185.636441469193
+      },
+      {
+        "step": 18600,
+        "train_loss": 3.0405477147747453,
+        "val_bpb": null,
+        "total_training_time": 17278.961606025696
+      },
+      {
+        "step": 18700,
+        "train_loss": 3.1807559203369427,
+        "val_bpb": null,
+        "total_training_time": 17372.078820466995
+      },
+      {
+        "step": 18750,
+        "train_loss": null,
+        "val_bpb": 0.9197163134454325,
+        "total_training_time": 17417.757249832153
+      },
+      {
+        "step": 18800,
+        "train_loss": 3.09151988082398,
+        "val_bpb": null,
+        "total_training_time": 17465.349115371704
+      },
+      {
+        "step": 18900,
+        "train_loss": 3.0906099380333627,
+        "val_bpb": null,
+        "total_training_time": 17558.479232788086
+      },
+      {
+        "step": 19000,
+        "train_loss": null,
+        "val_bpb": 0.918276011787579,
+        "total_training_time": 17650.756892681122
+      },
+      {
+        "step": 19000,
+        "train_loss": 3.1152692127538137,
+        "val_bpb": null,
+        "total_training_time": 17651.629592895508
+      },
+      {
+        "step": 19100,
+        "train_loss": 3.1085985209222846,
+        "val_bpb": null,
+        "total_training_time": 17745.05261015892
+      },
+      {
+        "step": 19200,
+        "train_loss": 3.0728170101670287,
+        "val_bpb": null,
+        "total_training_time": 17838.28928923607
+      },
+      {
+        "step": 19250,
+        "train_loss": null,
+        "val_bpb": 0.915573930831668,
+        "total_training_time": 17883.953325510025
+      },
+      {
+        "step": 19300,
+        "train_loss": 3.1065543900543338,
+        "val_bpb": null,
+        "total_training_time": 17931.566719293594
+      },
+      {
+        "step": 19400,
+        "train_loss": 3.075129852106766,
+        "val_bpb": null,
+        "total_training_time": 18024.66309452057
+      },
+      {
+        "step": 19500,
+        "train_loss": null,
+        "val_bpb": 0.9137947686234498,
+        "total_training_time": 18116.794214963913
+      },
+      {
+        "step": 19500,
+        "train_loss": 3.1104393769989116,
+        "val_bpb": null,
+        "total_training_time": 18117.672126054764
+      },
+      {
+        "step": 19600,
+        "train_loss": 3.0629688605331866,
+        "val_bpb": null,
+        "total_training_time": 18211.172805309296
+      },
+      {
+        "step": 19700,
+        "train_loss": 3.19402692975507,
+        "val_bpb": null,
+        "total_training_time": 18304.371374368668
+      },
+      {
+        "step": 19750,
+        "train_loss": null,
+        "val_bpb": 0.9122098595245973,
+        "total_training_time": 18350.08859705925
+      },
+      {
+        "step": 19800,
+        "train_loss": 2.9151527484433144,
+        "val_bpb": null,
+        "total_training_time": 18397.67326617241
+      },
+      {
+        "step": 19900,
+        "train_loss": 3.111284034879954,
+        "val_bpb": null,
+        "total_training_time": 18490.815301179886
+      },
+      {
+        "step": 20000,
+        "train_loss": null,
+        "val_bpb": 0.9098790386904126,
+        "total_training_time": 18582.983037233353
+      },
+      {
+        "step": 20000,
+        "train_loss": 3.1211527348277963,
+        "val_bpb": null,
+        "total_training_time": 18583.856143712997
+      },
+      {
+        "step": 20100,
+        "train_loss": 3.0999672572097134,
+        "val_bpb": null,
+        "total_training_time": 18677.132271528244
+      },
+      {
+        "step": 20200,
+        "train_loss": 2.955627798914001,
+        "val_bpb": null,
+        "total_training_time": 18770.2684135437
+      },
+      {
+        "step": 20250,
+        "train_loss": null,
+        "val_bpb": 0.9085254004739961,
+        "total_training_time": 18815.996017932892
+      },
+      {
+        "step": 20300,
+        "train_loss": 3.1330739173896434,
+        "val_bpb": null,
+        "total_training_time": 18863.59907746315
+      },
+      {
+        "step": 20400,
+        "train_loss": 3.0922809319226836,
+        "val_bpb": null,
+        "total_training_time": 18957.03261899948
+      },
+      {
+        "step": 20500,
+        "train_loss": null,
+        "val_bpb": 0.905959412149684,
+        "total_training_time": 19049.459495067596
+      },
+      {
+        "step": 20500,
+        "train_loss": 3.0639391010994017,
+        "val_bpb": null,
+        "total_training_time": 19050.332181215286
+      },
+      {
+        "step": 20600,
+        "train_loss": 3.1354541273616046,
+        "val_bpb": null,
+        "total_training_time": 19143.67948436737
+      },
+      {
+        "step": 20700,
+        "train_loss": 2.992614844171574,
+        "val_bpb": null,
+        "total_training_time": 19236.955993890762
+      },
+      {
+        "step": 20750,
+        "train_loss": null,
+        "val_bpb": 0.9042449047653854,
+        "total_training_time": 19282.643864154816
+      },
+      {
+        "step": 20800,
+        "train_loss": 3.016904667184304,
+        "val_bpb": null,
+        "total_training_time": 19330.36630129814
+      },
+      {
+        "step": 20900,
+        "train_loss": 3.0903124189254583,
+        "val_bpb": null,
+        "total_training_time": 19423.748685598373
+      },
+      {
+        "step": 21000,
+        "train_loss": null,
+        "val_bpb": 0.9026319978186749,
+        "total_training_time": 19516.02929663658
+      },
+      {
+        "step": 21000,
+        "train_loss": 3.0498372733745045,
+        "val_bpb": null,
+        "total_training_time": 19516.908709526062
+      },
+      {
+        "step": 21100,
+        "train_loss": 3.119736887117087,
+        "val_bpb": null,
+        "total_training_time": 19610.194927692413
+      },
+      {
+        "step": 21200,
+        "train_loss": 3.0098234331805194,
+        "val_bpb": null,
+        "total_training_time": 19703.663160085678
+      },
+      {
+        "step": 21250,
+        "train_loss": null,
+        "val_bpb": 0.9009799804762452,
+        "total_training_time": 19749.326652526855
+      },
+      {
+        "step": 21300,
+        "train_loss": 2.932166679681937,
+        "val_bpb": null,
+        "total_training_time": 19796.929874420166
+      },
+      {
+        "step": 21400,
+        "train_loss": 2.933973329892195,
+        "val_bpb": null,
+        "total_training_time": 19890.49310851097
+      },
+      {
+        "step": 21500,
+        "train_loss": null,
+        "val_bpb": 0.8993146858039033,
+        "total_training_time": 19982.978013515472
+      },
+      {
+        "step": 21500,
+        "train_loss": 2.9744629329275356,
+        "val_bpb": null,
+        "total_training_time": 19983.855329036713
+      },
+      {
+        "step": 21600,
+        "train_loss": 3.0582278497707494,
+        "val_bpb": null,
+        "total_training_time": 20077.192047834396
+      },
+      {
+        "step": 21700,
+        "train_loss": 3.030031089746517,
+        "val_bpb": null,
+        "total_training_time": 20170.492349624634
+      },
+      {
+        "step": 21750,
+        "train_loss": null,
+        "val_bpb": 0.8981406523383083,
+        "total_training_time": 20216.48388171196
+      },
+      {
+        "step": 21800,
+        "train_loss": 3.0308928134927067,
+        "val_bpb": null,
+        "total_training_time": 20264.183777093887
+      },
+      {
+        "step": 21900,
+        "train_loss": 2.917985795642697,
+        "val_bpb": null,
+        "total_training_time": 20357.682192325592
+      },
+      {
+        "step": 22000,
+        "train_loss": null,
+        "val_bpb": 0.8968076517107768,
+        "total_training_time": 20450.080719947815
+      }
+    ]
+  },
+  "vanilla_pilot": {
+    "name": "my-kaggle-d8",
+    "url": "https://wandb.ai/hbpkillerx/nanochat/runs/ovw1n6ok",
+    "state": "finished",
+    "config": {
+      "depth": 8,
+      "num_iterations": 1500,
+      "device_batch_size": 4,
+      "max_seq_len": 1024,
+      "total_batch_size": 65536,
+      "model_tag": "kaggle-d8",
+      "run": "my-kaggle-d8"
+    },
+    "summary": {
+      "step": 1500,
+      "train_loss": 3.528699613343385,
+      "val_bpb": 1.0396462924281982,
+      "total_training_time": 1436.2724044322968,
+      "_runtime": 1476
+    },
+    "history": [
+      {
+        "step": 0,
+        "train_loss": null,
+        "val_bpb": 3.1402982018477665,
+        "total_training_time": 0
+      },
+      {
+        "step": 0,
+        "train_loss": 10.396870613098145,
+        "val_bpb": null,
+        "total_training_time": 0
+      },
+      {
+        "step": 100,
+        "train_loss": 5.76114483984657,
+        "val_bpb": null,
+        "total_training_time": 78.64930176734924
+      },
+      {
+        "step": 200,
+        "train_loss": 4.939954890557662,
+        "val_bpb": null,
+        "total_training_time": 176.4554626941681
+      },
+      {
+        "step": 250,
+        "train_loss": null,
+        "val_bpb": 1.414902782535209,
+        "total_training_time": 224.86297130584717
+      },
+      {
+        "step": 300,
+        "train_loss": 4.483743836952022,
+        "val_bpb": null,
+        "total_training_time": 274.7591631412506
+      },
+      {
+        "step": 400,
+        "train_loss": 4.187364194705025,
+        "val_bpb": null,
+        "total_training_time": 371.89119696617126
+      },
+      {
+        "step": 500,
+        "train_loss": null,
+        "val_bpb": 1.2062948550868844,
+        "total_training_time": 468.1889898777008
+      },
+      {
+        "step": 500,
+        "train_loss": 3.9507732539676814,
+        "val_bpb": null,
+        "total_training_time": 469.14379477500916
+      },
+      {
+        "step": 600,
+        "train_loss": 3.9141539445225293,
+        "val_bpb": null,
+        "total_training_time": 566.0577340126038
+      },
+      {
+        "step": 700,
+        "train_loss": 3.846627464079317,
+        "val_bpb": null,
+        "total_training_time": 662.9239962100983
+      },
+      {
+        "step": 750,
+        "train_loss": null,
+        "val_bpb": 1.1343351782912037,
+        "total_training_time": 710.507684469223
+      },
+      {
+        "step": 800,
+        "train_loss": 3.721003498303716,
+        "val_bpb": null,
+        "total_training_time": 759.9130504131317
+      },
+      {
+        "step": 900,
+        "train_loss": 3.6470495952044053,
+        "val_bpb": null,
+        "total_training_time": 856.7599103450775
+      },
+      {
+        "step": 1000,
+        "train_loss": null,
+        "val_bpb": 1.088783886630849,
+        "total_training_time": 952.5401017665863
+      },
+      {
+        "step": 1000,
+        "train_loss": 3.719916403050918,
+        "val_bpb": null,
+        "total_training_time": 953.4865379333496
+      },
+      {
+        "step": 1100,
+        "train_loss": 3.681299293494527,
+        "val_bpb": null,
+        "total_training_time": 1050.407470703125
+      },
+      {
+        "step": 1200,
+        "train_loss": 3.513062150343595,
+        "val_bpb": null,
+        "total_training_time": 1147.1229982376099
+      },
+      {
+        "step": 1250,
+        "train_loss": null,
+        "val_bpb": 1.0582010960994594,
+        "total_training_time": 1194.29452419281
+      },
+      {
+        "step": 1300,
+        "train_loss": 3.451793242580132,
+        "val_bpb": null,
+        "total_training_time": 1243.6028439998627
+      },
+      {
+        "step": 1400,
+        "train_loss": 3.528699613343385,
+        "val_bpb": null,
+        "total_training_time": 1340.4308922290802
+      },
+      {
+        "step": 1500,
+        "train_loss": null,
+        "val_bpb": 1.0396462924281982,
+        "total_training_time": 1436.2724044322968
+      }
+    ]
+  },
+  "l0_abl_pilot": {
+    "name": "my-kaggle-d8-L0-abl",
+    "url": "https://wandb.ai/hbpkillerx/nanochat/runs/x263u8o5",
+    "state": "finished",
+    "config": {
+      "depth": 8,
+      "num_iterations": 1500,
+      "device_batch_size": 4,
+      "max_seq_len": 1024,
+      "total_batch_size": 65536,
+      "model_tag": "kaggle-d8",
+      "run": "my-kaggle-d8-L0-abl"
+    },
+    "summary": {
+      "step": 1500,
+      "train_loss": 3.541324701366291,
+      "val_bpb": 1.041985291983189,
+      "total_training_time": 1372.7902007102966,
+      "_runtime": 1487
+    },
+    "history": [
+      {
+        "step": 0,
+        "train_loss": null,
+        "val_bpb": 3.140298490274865,
+        "total_training_time": 0
+      },
+      {
+        "step": 0,
+        "train_loss": 10.396869659423828,
+        "val_bpb": null,
+        "total_training_time": 0
+      },
+      {
+        "step": 100,
+        "train_loss": 5.6848879170752085,
+        "val_bpb": null,
+        "total_training_time": 81.47293496131897
+      },
+      {
+        "step": 200,
+        "train_loss": 4.852364987552901,
+        "val_bpb": null,
+        "total_training_time": 174.1970796585083
+      },
+      {
+        "step": 250,
+        "train_loss": null,
+        "val_bpb": 1.387281273023745,
+        "total_training_time": 219.4726984500885
+      },
+      {
+        "step": 300,
+        "train_loss": 4.402045279215142,
+        "val_bpb": null,
+        "total_training_time": 266.92556500434875
+      },
+      {
+        "step": 400,
+        "train_loss": 4.1614323868091985,
+        "val_bpb": null,
+        "total_training_time": 359.4181778430939
+      },
+      {
+        "step": 500,
+        "train_loss": null,
+        "val_bpb": 1.2030794697932123,
+        "total_training_time": 450.94455313682556
+      },
+      {
+        "step": 500,
+        "train_loss": 3.9423071550590634,
+        "val_bpb": null,
+        "total_training_time": 451.8163106441498
+      },
+      {
+        "step": 600,
+        "train_loss": 3.906786703258213,
+        "val_bpb": null,
+        "total_training_time": 544.0914084911346
+      },
+      {
+        "step": 700,
+        "train_loss": 3.8448795120815262,
+        "val_bpb": null,
+        "total_training_time": 636.3681282997131
+      },
+      {
+        "step": 750,
+        "train_loss": null,
+        "val_bpb": 1.133564140550236,
+        "total_training_time": 681.6235663890839
+      },
+      {
+        "step": 800,
+        "train_loss": 3.7176232570729693,
+        "val_bpb": null,
+        "total_training_time": 728.5597898960114
+      },
+      {
+        "step": 900,
+        "train_loss": 3.6508836513590968,
+        "val_bpb": null,
+        "total_training_time": 820.7083921432495
+      },
+      {
+        "step": 1000,
+        "train_loss": null,
+        "val_bpb": 1.090466714536835,
+        "total_training_time": 911.878359079361
+      },
+      {
+        "step": 1000,
+        "train_loss": 3.722734194096667,
+        "val_bpb": null,
+        "total_training_time": 912.7481427192688
+      },
+      {
+        "step": 1100,
+        "train_loss": 3.686249684054477,
+        "val_bpb": null,
+        "total_training_time": 1004.9505107402802
+      },
+      {
+        "step": 1200,
+        "train_loss": 3.519049162005264,
+        "val_bpb": null,
+        "total_training_time": 1097.0858387947083
+      },
+      {
+        "step": 1250,
+        "train_loss": null,
+        "val_bpb": 1.0602645035618679,
+        "total_training_time": 1142.1830778121948
+      },
+      {
+        "step": 1300,
+        "train_loss": 3.458751670845901,
+        "val_bpb": null,
+        "total_training_time": 1189.1864058971405
+      },
+      {
+        "step": 1400,
+        "train_loss": 3.541324701366291,
+        "val_bpb": null,
+        "total_training_time": 1281.4845361709595
+      },
+      {
+        "step": 1500,
+        "train_loss": null,
+        "val_bpb": 1.0419852919831887,
+        "total_training_time": 1372.7902007102966
+      }
+    ]
+  }
+}

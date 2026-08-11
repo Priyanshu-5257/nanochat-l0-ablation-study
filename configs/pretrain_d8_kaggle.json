@@ -1,0 +1,25 @@
+{
+  "description": "Shared pretrain config for vanilla vs L0-abl on Kaggle 2xT4",
+  "depth": 8,
+  "max_seq_len": 1024,
+  "device_batch_size": 4,
+  "total_batch_size": 65536,
+  "num_iterations": 22000,
+  "nproc": 2,
+  "dtype": "float16",
+  "dataset": "ClimbMix (nanochat parquet shards)",
+  "num_climbmix_shards": 40,
+  "hardware": "Kaggle NVIDIA T4 x2",
+  "variants": {
+    "vanilla": {
+      "layer0": "Attn residual + MLP residual",
+      "wandb_run_22k": "my-kaggle-d8",
+      "wandb_id_22k": "kk2bdl2w"
+    },
+    "l0_ablation": {
+      "layer0": "MLP only (no attention, no residual)",
+      "wandb_run_22k": "my-kaggle-d8-L0-abl",
+      "wandb_id_22k": "ixxaq73z"
+    }
+  }
+}
