@@ -1,5 +1,5 @@
 {
-  "description": "Shared pretrain config for vanilla vs L0-abl on Kaggle 2xT4",
+  "description": "Shared pretrain config; only architecture differs across variants",
   "depth": 8,
   "max_seq_len": 1024,
   "device_batch_size": 4,
@@ -8,18 +8,43 @@
   "nproc": 2,
   "dtype": "float16",
   "dataset": "ClimbMix (nanochat parquet shards)",
-  "num_climbmix_shards": 40,
   "hardware": "Kaggle NVIDIA T4 x2",
   "variants": {
     "vanilla": {
-      "layer0": "Attn residual + MLP residual",
-      "wandb_run_22k": "my-kaggle-d8",
-      "wandb_id_22k": "kk2bdl2w"
+      "id": "V",
+      "layer0": "Attn residual + MLP residual (ratio 4)",
+      "middle_layer": "vanilla",
+      "branch": "master",
+      "wandb_run": "my-kaggle-d8",
+      "wandb_id": "kk2bdl2w",
+      "status": "finished_22k"
     },
-    "l0_ablation": {
-      "layer0": "MLP only (no attention, no residual)",
-      "wandb_run_22k": "my-kaggle-d8-L0-abl",
-      "wandb_id_22k": "ixxaq73z"
+    "l0_ablation_r4": {
+      "id": "E1",
+      "layer0": "MLP only ratio 4; no attn; no residual",
+      "middle_layer": "vanilla",
+      "branch": "exp/layer0-no-attn-no-resid",
+      "wandb_run": "my-kaggle-d8-L0-abl",
+      "wandb_id": "ixxaq73z",
+      "status": "finished_22k"
+    },
+    "l0_ablation_r6": {
+      "id": "E2",
+      "layer0": "MLP only ratio 6; no attn; no residual (param-matched)",
+      "middle_layer": "vanilla",
+      "branch": "exp/layer0-no-attn-no-resid-mlp6",
+      "wandb_run": "my-kaggle-d8-L0-abl",
+      "wandb_id": "8l97e3oj",
+      "status": "crashed_~18400"
+    },
+    "l0_ablation_mid_router": {
+      "id": "E3",
+      "layer0": "MLP only ratio 4; no attn; no residual",
+      "middle_layer": "AttnBypassRouter gates attention residual",
+      "branch": "exp/layer0-no-attn-mid-router",
+      "wandb_run": "layer0-no-attn-mid-router",
+      "wandb_id": "znruy3o5",
+      "status": "finished_22k"
     }
   }
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate plots from results/data/metrics.json."""
+"""Regenerate all comparison plots from results/data/metrics.json."""
 from __future__ import annotations
 
 import json
@@ -13,6 +13,14 @@ import matplotlib.pyplot as plt
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "results" / "data" / "metrics.json"
 OUT = ROOT / "results" / "plots"
+
+ORDER = ["vanilla", "l0_r4", "l0_r6", "l0_mid_router"]
+COLORS = {
+    "vanilla": "#2ca02c",
+    "l0_r4": "#9467bd",
+    "l0_r6": "#ff7f0e",
+    "l0_mid_router": "#1f77b4",
+}
 
 
 def series(data, run_key, field):
@@ -37,65 +45,94 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({"axes.grid": True, "grid.alpha": 0.3, "font.size": 11})
 
-    fig, ax = plt.subplots(figsize=(9, 5))
-    for key, label, color in [
-        ("vanilla", "Vanilla (full L0 attn + residual)", "#2ca02c"),
-        ("l0_abl", "L0-abl (no L0 attn, no L0 residual)", "#9467bd"),
-    ]:
+    # train loss
+    fig, ax = plt.subplots(figsize=(10, 5.5))
+    for key in ORDER:
         xs, ys = series(data, key, "train_loss")
-        ax.plot(xs, ys, label=label, color=color, linewidth=2)
+        ax.plot(
+            xs,
+            ys,
+            label=data[key]["label"],
+            color=COLORS[key],
+            linewidth=2,
+            linestyle="--" if key == "l0_r6" else "-",
+        )
     ax.set_xlabel("Step")
     ax.set_ylabel("Train loss")
-    ax.set_title("Pretraining train loss — d8 on 2×T4 (22k steps)")
+    ax.set_title("Pretraining train loss — all variants (d8, 2×T4)")
     ax.legend()
     fig.tight_layout()
-    fig.savefig(OUT / "train_loss_22k.png", dpi=160)
+    fig.savefig(OUT / "train_loss_all.png", dpi=160)
     plt.close()
 
-    fig, ax = plt.subplots(figsize=(9, 5))
-    for key, label, color in [
-        ("vanilla", "Vanilla", "#2ca02c"),
-        ("l0_abl", "L0-abl", "#9467bd"),
-    ]:
+    # val bpb
+    fig, ax = plt.subplots(figsize=(10, 5.5))
+    for key in ORDER:
         xs, ys = series(data, key, "val_bpb")
-        ax.plot(xs, ys, label=label, color=color, linewidth=2, marker="o", markersize=3)
+        ax.plot(
+            xs,
+            ys,
+            label=data[key]["label"],
+            color=COLORS[key],
+            linewidth=2,
+            marker="o",
+            markersize=2.5,
+            linestyle="--" if key == "l0_r6" else "-",
+        )
     ax.set_xlabel("Step")
-    ax.set_ylabel("Validation bpb (bits per byte)")
-    ax.set_title("Pretraining validation bpb — d8 on 2×T4 (22k steps)")
+    ax.set_ylabel("Validation bpb ↓")
+    ax.set_title("Pretraining validation bpb — all variants (d8, 2×T4)")
     ax.legend()
     fig.tight_layout()
-    fig.savefig(OUT / "val_bpb_22k.png", dpi=160)
+    fig.savefig(OUT / "val_bpb_all.png", dpi=160)
     plt.close()
 
-    fig, ax = plt.subplots(figsize=(9, 5))
-    for key, label, color in [
-        ("vanilla_pilot", "Vanilla (1.5k pilot)", "#2ca02c"),
-        ("l0_abl_pilot", "L0-abl (1.5k pilot)", "#9467bd"),
+    # final bars
+    keys_bar = ORDER
+    labels = [data[k]["label"] + ("*" if not data[k].get("complete", True) else "") for k in keys_bar]
+    loss_v = [data[k]["summary"]["train_loss"] for k in keys_bar]
+    bpb_v = [data[k]["summary"]["val_bpb"] for k in keys_bar]
+    cols = [COLORS[k] for k in keys_bar]
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+    for ax, title, vals in [
+        (axes[0], "Final train loss ↓", loss_v),
+        (axes[1], "Final / last val bpb ↓", bpb_v),
     ]:
-        xs, ys = series(data, key, "train_loss")
-        ax.plot(xs, ys, label=label, color=color, linewidth=2)
-    ax.set_xlabel("Step")
-    ax.set_ylabel("Train loss")
-    ax.set_title("Pilot (~25 min) — train loss")
-    ax.legend()
-    fig.tight_layout()
-    fig.savefig(OUT / "train_loss_pilot.png", dpi=160)
-    plt.close()
-
-    fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))
-    pairs = [
-        (axes[0], "Final train loss ↓", [data["vanilla"]["summary"]["train_loss"], data["l0_abl"]["summary"]["train_loss"]]),
-        (axes[1], "Final val bpb ↓", [data["vanilla"]["summary"]["val_bpb"], data["l0_abl"]["summary"]["val_bpb"]]),
-    ]
-    for ax, title, vals in pairs:
-        bars = ax.bar(["Vanilla", "L0-abl"], vals, color=["#2ca02c", "#9467bd"], width=0.55)
+        bars = ax.bar(range(len(labels)), vals, color=cols, width=0.65)
+        ax.set_xticks(range(len(labels)))
+        ax.set_xticklabels(labels, rotation=15, ha="right")
         ax.set_title(title)
         for b, v in zip(bars, vals):
-            ax.text(b.get_x() + b.get_width() / 2, v, f"{v:.4f}", ha="center", va="bottom")
-        ax.set_ylim(min(vals) * 0.98, max(vals) * 1.01)
-    fig.suptitle("Final metrics after 22k pretrain steps (lower is better)", y=1.02)
+            ax.text(b.get_x() + b.get_width() / 2, v, f"{v:.4f}", ha="center", va="bottom", fontsize=9)
+        ax.set_ylim(min(vals) * 0.985, max(vals) * 1.008)
+    fig.suptitle("* incomplete run (crashed before 22k)", y=1.02, fontsize=10)
     fig.tight_layout()
-    fig.savefig(OUT / "final_metrics_bars.png", dpi=160, bbox_inches="tight")
+    fig.savefig(OUT / "final_metrics_all.png", dpi=160, bbox_inches="tight")
+    plt.close()
+
+    # gap vs vanilla
+    fig, ax = plt.subplots(figsize=(10, 5))
+    van_x, van_y = series(data, "vanilla", "val_bpb")
+    van = dict(zip(van_x, van_y))
+    for key in ["l0_r4", "l0_r6", "l0_mid_router"]:
+        xs, ys = series(data, key, "val_bpb")
+        gap_x, gap_y = [], []
+        for x, y in zip(xs, ys):
+            if not van_x:
+                continue
+            nearest = min(van_x, key=lambda t: abs(t - x))
+            if abs(nearest - x) > 300:
+                continue
+            gap_x.append(x)
+            gap_y.append(y - van[nearest])
+        ax.plot(gap_x, gap_y, label=f"{data[key]['label']} − vanilla", color=COLORS[key], linewidth=2)
+    ax.axhline(0, color="gray", linewidth=1)
+    ax.set_xlabel("Step")
+    ax.set_ylabel("Δ val bpb (variant − vanilla)")
+    ax.set_title("Validation gap vs vanilla (positive = worse)")
+    ax.legend()
+    fig.tight_layout()
+    fig.savefig(OUT / "val_bpb_gap_vs_vanilla.png", dpi=160)
     plt.close()
     print("Wrote plots to", OUT)
 

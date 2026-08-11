@@ -1,205 +1,240 @@
-# Layer-0 Attention & Residual Ablation on nanochat
+# Layer-0 Ablations on nanochat
 
 **Author:** [Priyanshu-5257](https://github.com/Priyanshu-5257)  
-**Status:** pretraining ablation study (completed)  
-**Base code:** [karpathy/nanochat](https://github.com/karpathy/nanochat) (forked experiment branches)
+**Base stack:** [karpathy/nanochat](https://github.com/karpathy/nanochat)  
+**Code forks used for training:** [hbpkillerX-5257/nanochat](https://github.com/hbpkillerX-5257/nanochat)  
+**Hardware:** Kaggle **2× NVIDIA T4**, fp16
 
-This repo documents a controlled ablation: **remove multi-head attention and residual connections from layer 0 only**, and compare against the **vanilla** nanochat GPT stack under identical training conditions.
+This repo is a **results report** (not the full trainer). It compares **vanilla nanochat** against **three layer-0 experiments** under the same d8 pretrain recipe.
+
+---
+
+## Experiments at a glance
+
+| ID | Name | What changes | Branch | Status |
+|----|------|--------------|--------|--------|
+| **V** | **Vanilla** | Full stack | `master` | ✅ 22k steps |
+| **E1** | **L0-abl (r=4)** | Layer 0: **no attention, no residual**, MLP ratio **4** | `exp/layer0-no-attn-no-resid` | ✅ 22k steps |
+| **E2** | **L0-abl (r=6)** | Same as E1, but L0 MLP ratio **6** (param reinvestment) | `exp/layer0-no-attn-no-resid-mlp6` | ⚠️ crashed ~18.4k |
+| **E3** | **L0-abl + mid router** | E1 + **middle layer** `AttnBypassRouter` (per-token gate: use attn or skip) | `exp/layer0-no-attn-mid-router` | ✅ 22k steps |
 
 ---
 
 ## 1. Intuition
 
-Standard decoder transformers look like:
+A normal decoder block is:
 
 ```text
-x₀ → [ Attn residual ] → [ MLP residual ] → x₁ → … → x_L
+x ← x + Attn(Norm(x))     # token mixing + residual
+x ← x + MLP(Norm(x))      # channel mixing + residual
 ```
 
-Each block typically does:
+**Layer 0** is special: it is the first nonlinear stage after embeddings. We asked:
 
-```text
-x ← x + Attn(Norm(x))
-x ← x + MLP(Norm(x))
-```
+> Can we delete early attention (and residual), and still match vanilla quality — maybe by widening the MLP, or by learning when later attention is needed?
 
-**Why ablate layer 0?**
+| Experiment | Hypothesis |
+|------------|------------|
+| **E1 — no L0 attn / no L0 residual (MLP r=4)** | Early mixing might be redundant; a pure token-wise MLP rewrite may be enough before deeper layers mix. Cheaper, smaller KV cache. |
+| **E2 — same + MLP r=6** | Maybe E1 only failed because of **fewer parameters**. Reinvest attention params into a wider L0 MLP (≈ `12 d²` block budget again). If quality still lags, the issue is **missing token mixing**, not parameter count. |
+| **E3 — mid-layer attn router** | Keep E1 at L0, but at the **middle layer** learn a **binary-ish gate**: per token, blend in attention residual or skip it. Maybe the model only needs attention sometimes / on some tokens. |
 
-| Hypothesis | Idea |
-|------------|------|
-| **H1 — Early mixing matters** | Layer 0 is the first place tokens can attend to each other. Removing L0 attention forces the model to start with a **token-local** transform (MLP only). |
-| **H2 — Residuals stabilize depth** | Residual (skip) connections keep the stream as “identity + small update.” Removing them on L0 forces a **pure rewrite** of the representation. |
-| **H3 — Later layers can compensate** | Layers 1…L−1 still have full attention + residuals, so the model might recover. If it **doesn’t fully recover**, L0 attn+residual were doing real work. |
-
-**Prediction:** L0 ablation should be **slightly worse** (higher train loss and val bpb) if L0 attention + residual are useful — not catastrophic if later layers compensate.
+**Prediction:** If early token mixing matters, **E1/E2/E3 all stay slightly worse than vanilla on val bpb**. If width fixes it, **E2 ≈ vanilla**. If dynamic attention helps, **E3 > E1**.
 
 ---
 
-## 2. What we changed
+## 2. Architectures
 
-### Vanilla block (all layers)
+### Vanilla (V)
+
+All layers:
 
 ```text
 x = x + Attn(Norm(x))
-x = x + MLP(Norm(x))
+x = x + MLP_r4(Norm(x))
 ```
 
-### Ablated layer 0 only
+### E1 — L0 ablation, MLP ratio 4
 
 ```text
-# no attention
-# no residual
-x = MLP(Norm(x))
+L0:  x = MLP_r4(Norm(x))          # NO attn, NO residual
+L1+: x = x + Attn(Norm(x))
+     x = x + MLP_r4(Norm(x))
 ```
 
-Layers **1 … depth−1** stay vanilla.
+### E2 — L0 ablation, MLP ratio 6 (param-matched)
 
-Implementation lived on experiment branches of the code fork:
+```text
+L0:  x = MLP_r6(Norm(x))          # wider MLP; still no attn / no residual
+L1+: same as vanilla
+```
 
-| Variant | Branch / idea |
-|---------|----------------|
-| Vanilla | `master` of the training fork |
-| L0-abl | `exp/layer0-no-attn-no-resid` |
+Motivation: full MHA block ≈ `4d²` (attn) + `8d²` (MLP r=4) = `12d²`.  
+L0 with r=6 MLP only ≈ `2 × 6 d² = 12d²` → **same parameter budget** as a full block, but **no token mixing**.
 
-Code reference (training harness): https://github.com/hbpkillerX-5257/nanochat
+### E3 — L0 ablation + middle-layer attention bypass router
+
+```text
+L0:       same as E1 (MLP-only, no residual)
+L_mid:    gate = σ(Router(x[..., :32]))     # scalar in (0,1) per token
+          x = x + gate * Attn(Norm(x))      # soft on/off attention residual
+          x = x + MLP_r4(Norm(x))
+other L:  vanilla
+```
+
+Router is tiny (`Linear(32 → 1)` + bias), trained with AdamW (not Muon). Bias init ≈ +2 so gates start **mostly ON** (use attention).
+
+```text
+Vanilla d8                 E1 / E2                         E3
+─────────                  ──────                          ──
+embed                      embed                           embed
+L0: Attn+res, MLP+res      L0: MLP only (r=4 or r=6)       L0: MLP only (r=4)
+L1..L3: full               L1..L3: full                    L1..L3: full
+L4: full                   L4: full                        L4: gated Attn residual
+L5..L7: full               L5..L7: full                    L5..L7: full
+lm_head                    lm_head                         lm_head
+```
 
 ---
 
-## 3. Experimental setup (identical for both)
+## 3. Shared training recipe
 
 | Item | Value |
 |------|------:|
-| Model depth | **8** (`d8`) |
-| Sequence length | 1024 |
-| Device batch size | 4 per GPU |
-| GPUs | **2× NVIDIA T4** (Kaggle) |
+| Depth | **8** |
+| Seq len | 1024 |
+| Microbatch | 4 / GPU |
+| GPUs | 2× T4 |
 | Global batch | 65,536 tokens |
-| Precision | **fp16** (`NANOCHAT_DTYPE=float16`) |
-| Pretrain steps | **22,000** (~5–6 hours) |
-| Data | ClimbMix shards (nanochat pretrain mix) |
-| Metric | train CE loss + **val bpb** (bits/byte) |
+| Steps (target) | **22,000** |
+| Dtype | fp16 |
+| Data | ClimbMix (nanochat shards) |
 
-Pilot runs (1,500 steps, ~25 min) were used first to sanity-check the ablation before the long runs.
+Only the architecture differs across V / E1 / E2 / E3.
 
 ---
 
 ## 4. Results
 
-### 4.1 Final metrics (22k steps)
+### 4.1 Final metrics
 
-| Architecture | Train loss ↓ | Val bpb ↓ | Wall time |
-|--------------|-------------:|----------:|----------:|
-| **Vanilla** | **2.907** | **0.892** | ~6.0 h |
-| **L0-abl** | 2.918 | 0.897 | ~5.7 h |
-| **Δ (abl − van)** | **+0.011** | **+0.005** | slightly faster |
+| Variant | Steps | Train loss ↓ | Val bpb ↓ | Δ val vs vanilla | Wall time |
+|---------|------:|-------------:|----------:|-----------------:|----------:|
+| **V Vanilla** | 22,000 | **2.907** | **0.8918** | — | ~6.0 h |
+| **E1 L0 r=4** | 22,000 | 2.918 | 0.8968 | **+0.0050** | ~5.7 h |
+| **E3 L0 + mid router** | 22,000 | 2.918 | 0.8967 | **+0.0049** | ~6 h |
+| **E2 L0 r=6** | **18,400*** | 3.176* | 0.9241* | worse mid-run; run incomplete | crashed |
 
-**Vanilla wins on both train and validation.** The gap is small but **consistent in direction**.
+\*E2 crashed before 22k; last logged metrics are not directly comparable as a “finished” score. Trajectory through ~16–18k already tracked E1 (did **not** catch vanilla).
 
-![Final metrics](results/plots/final_metrics_bars.png)
+![Final metrics](results/plots/final_metrics_all.png)
 
-### 4.2 Train loss curves
+### 4.2 Train loss (all)
 
-![Train loss 22k](results/plots/train_loss_22k.png)
+![Train loss all](results/plots/train_loss_all.png)
 
-Both curves drop quickly, then improve slowly. After the early phase, **L0-abl sits slightly above vanilla** (higher loss).
+All variants learn; after the early drop, **vanilla stays lowest**. E1 and E3 nearly overlap. E2 (dashed) incomplete.
 
-### 4.3 Validation bpb curves
+### 4.3 Validation bpb (all)
 
-![Val bpb 22k](results/plots/val_bpb_22k.png)
+![Val bpb all](results/plots/val_bpb_all.png)
 
-Validation tracks the same story: **L0-abl ≥ vanilla** throughout the long run (worse or equal, never clearly better).
+Same ordering on the metric that matters for fair LM quality: **vanilla best**, then E1 ≈ E3, E2 not better.
 
-### 4.4 Pilot (~1.5k steps)
+### 4.4 Gap vs vanilla (val bpb)
 
-Same ordering already visible in the short pilot:
+![Val gap](results/plots/val_bpb_gap_vs_vanilla.png)
 
-| | Train loss | Val bpb |
-|--|-----------:|--------:|
-| Vanilla | 3.529 | 1.040 |
-| L0-abl | 3.541 | 1.042 |
-
-![Pilot train loss](results/plots/train_loss_pilot.png)
+Positive = worse than vanilla. After ~step 500, ablations sit **above zero** and stay there.
 
 ---
 
 ## 5. Interpretation
 
-1. **Removing L0 attention + residual does not break training** — loss decreases smoothly; no collapse.
-2. **It does not help** — on this setup, ablation is uniformly a bit worse on train **and** val.
-3. That supports the simple claim: **layer-0 multi-head attention and residual connections contribute positively** to next-token modeling at d8 / ClimbMix scale.
-4. The effect size is **modest** (+0.01 train loss, +0.005 val bpb at 22k steps). Later full blocks partly compensate, but not completely.
-5. Because **val** is worse too (not only train), this is unlikely to be “just train-curve noise.”
+### E1 — L0 no attn / no residual (r=4)
 
-### What this does *not* claim
+- **Works** (stable training, smooth curves).
+- **Slightly worse** final quality: **+0.005 val bpb**.
+- Modestly **faster** train (~+5% tok/s in earlier analysis) and **one fewer KV layer**.
+- Not a free win: quality cost is real and systematic on both train and val.
 
-- Does **not** prove L0 attention is always required at all scales.
-- Does **not** separate “no attention” vs “no residual” (they were removed **together**).
-- Does **not** include a finished SFT / chat eval comparison (SFT was unstable/incomplete in these sessions).
+### E2 — param-matched MLP r=6
 
----
+- **Does not fix** the regression vs vanilla (trajectory stays with E1, not V).
+- Supports: the missing ingredient is **token mixing / residual structure**, not raw L0 parameter count.
+- Run **crashed ~18.4k** (incomplete final number); conclusion uses matched mid-run behavior + incomplete end state.
 
-## 6. Architecture sketch
+### E3 — mid-layer attention router
 
-```text
-Vanilla d8                          L0-abl d8
-─────────                           ────────
-embed + smear                       embed + smear
-L0: Attn+res → MLP+res              L0: MLP only (no Attn, no res)
-L1: Attn+res → MLP+res              L1: Attn+res → MLP+res
-…                                   …
-L7: Attn+res → MLP+res              L7: Attn+res → MLP+res
-lm_head                             lm_head
-```
+- Finishes 22k; **almost identical to E1** (val bpb 0.8967 vs 0.8968).
+- Router **does not recover vanilla** and **does not clearly beat plain E1**.
+- At this scale, a soft per-token gate on middle attention is not enough to offset the L0 ablation.
 
----
+### Bottom line
 
-## 7. Reproducing / data
-
-Raw W&B export used for plots:
-
-- `results/data/metrics.json` — histories + summaries for pilot and 22k runs
-
-Primary long runs (W&B):
-
-| Name | Link |
-|------|------|
-| Vanilla 22k | https://wandb.ai/hbpkillerx/nanochat/runs/kk2bdl2w |
-| L0-abl 22k | https://wandb.ai/hbpkillerx/nanochat/runs/ixxaq73z |
-
-Training entrypoint used on Kaggle: `runs/kaggle_t4x2.py` in the code fork.
+| Claim | Supported? |
+|-------|------------|
+| L0 attn+residual can be removed without collapse | ✅ |
+| Removing them is free (same quality) | ❌ |
+| Extra MLP width buys back quality | ❌ (E2) |
+| Learnable mid-attn routing buys back quality | ❌ (E3 ≈ E1) |
+| Vanilla still best under this recipe | ✅ |
 
 ---
 
-## 8. Repo layout
+## 6. W&B runs
+
+| Variant | Run name | ID | Link |
+|---------|----------|-----|------|
+| Vanilla | `my-kaggle-d8` | `kk2bdl2w` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/kk2bdl2w) |
+| E1 L0 r=4 | `my-kaggle-d8-L0-abl` | `ixxaq73z` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/ixxaq73z) |
+| E2 L0 r=6 | `my-kaggle-d8-L0-abl` | `8l97e3oj` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/8l97e3oj) (crashed) |
+| E3 mid router | `layer0-no-attn-mid-router` | `znruy3o5` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/znruy3o5) |
+
+Histories: [`results/data/metrics.json`](results/data/metrics.json).  
+Regenerate plots: `python scripts/make_plots.py`.
+
+---
+
+## 7. Repo layout
 
 ```text
 .
-├── README.md                 # this writeup
-├── configs/                  # training config snapshot
-├── docs/                     # extra notes
+├── README.md
+├── LICENSE
+├── configs/pretrain_d8_kaggle.json
+├── docs/method.md
 ├── results/
-│   ├── data/metrics.json     # exported histories
-│   └── plots/                # figures used above
-└── LICENSE
+│   ├── data/metrics.json
+│   └── plots/          # figures embedded above
+└── scripts/make_plots.py
 ```
 
 ---
 
-## 9. Citation / credit
+## 8. Limitations
 
-- Training stack derived from **Andrej Karpathy’s** [nanochat](https://github.com/karpathy/nanochat).
-- Ablation design, Kaggle runs, analysis, and this report: **Priyanshu-5257**.
+- Joint ablation of **attn + residual** on L0 (not fully factorial).
+- E2 incomplete (crash).
+- Single seed, single scale (d8 / ClimbMix / 2×T4).
+- SFT / chat eval not completed for fair comparison.
+- Router utilization stats (how often gate is on/off) not logged in these runs.
+
+---
+
+## Citation
 
 ```bibtex
-@misc{maurya2026l0ablation,
+@misc{maurya2026l0ablations,
   author = {Priyanshu Maurya},
-  title  = {Layer-0 Attention and Residual Ablation on nanochat},
+  title  = {Layer-0 Attention Ablations on nanochat},
   year   = {2026},
   url    = {https://github.com/Priyanshu-5257/nanochat-l0-ablation-study}
 }
 ```
 
----
+Training stack credit: **Andrej Karpathy / nanochat**.  
+Ablation design, runs, and this report: **Priyanshu-5257**.
 
 ## License
 
