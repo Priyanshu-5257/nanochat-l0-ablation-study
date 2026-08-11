@@ -182,16 +182,21 @@ Positive = worse than vanilla. After ~step 500, ablations sit **above zero** and
 
 ---
 
-## 6. W&B runs
+## 6. W&B runs (public)
+
+Project visibility is set to **open** (`USER_READ`) so run pages are readable without a private invite:
+
+- Project: [wandb.ai/hbpkillerx/nanochat](https://wandb.ai/hbpkillerx/nanochat)
 
 | Variant | Run name | ID | Link |
 |---------|----------|-----|------|
-| Vanilla | `my-kaggle-d8` | `kk2bdl2w` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/kk2bdl2w) |
-| E1 L0 r=4 | `my-kaggle-d8-L0-abl` | `ixxaq73z` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/ixxaq73z) |
-| E2 L0 r=6 | `my-kaggle-d8-L0-abl` | `8l97e3oj` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/8l97e3oj) (crashed) |
-| E3 mid router | `layer0-no-attn-mid-router` | `znruy3o5` | [link](https://wandb.ai/hbpkillerx/nanochat/runs/znruy3o5) |
+| Vanilla | `my-kaggle-d8` | `kk2bdl2w` | [open run](https://wandb.ai/hbpkillerx/nanochat/runs/kk2bdl2w) |
+| E1 L0 r=4 | `my-kaggle-d8-L0-abl` | `ixxaq73z` | [open run](https://wandb.ai/hbpkillerx/nanochat/runs/ixxaq73z) |
+| E2 L0 r=6 | `my-kaggle-d8-L0-abl` | `8l97e3oj` | [open run](https://wandb.ai/hbpkillerx/nanochat/runs/8l97e3oj) (crashed) |
+| E3 mid router | `layer0-no-attn-mid-router` | `znruy3o5` | [open run](https://wandb.ai/hbpkillerx/nanochat/runs/znruy3o5) |
 
-Histories: [`results/data/metrics.json`](results/data/metrics.json).  
+**Self-contained backup (no W&B required):** full histories are vendored in  
+[`results/data/metrics.json`](results/data/metrics.json) and all figures under [`results/plots/`](results/plots/).  
 Regenerate plots: `python scripts/make_plots.py`.
 
 ---
